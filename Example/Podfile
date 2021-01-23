@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '9.0'
+
+target 'HoloWebViewBridge_Example' do
+  pod 'HoloWebViewBridge', :path => '../'
+
+  target 'HoloWebViewBridge_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
