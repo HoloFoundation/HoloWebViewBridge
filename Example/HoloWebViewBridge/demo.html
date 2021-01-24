@@ -1,0 +1,25 @@
+<html>
+    <header>
+        <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+                <title>hello world</title>
+    </header>
+    <script type="text/javascript">
+        
+        function tapped() {
+            window.bridge.log("hello world")
+        }
+    
+        function alert() {
+            window.bridge.alert("hello world", function(msg) {
+                window.bridge.log(msg)
+            })
+        }
+    
+    </script>
+    <a href="javascript:tapped();">Native Log</a>
+    <br/>
+    </script>
+    <a href="javascript:alert();">Native Alert</a>
+    <br/>
+</html>

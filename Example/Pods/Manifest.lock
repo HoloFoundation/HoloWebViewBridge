@@ -1,0 +1,16 @@
+PODS:
+  - HoloWebViewBridge (0.1.0)
+
+DEPENDENCIES:
+  - HoloWebViewBridge (from `../`)
+
+EXTERNAL SOURCES:
+  HoloWebViewBridge:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  HoloWebViewBridge: 031ca17568ceb07cb4d142d0fda4493fa27b3847
+
+PODFILE CHECKSUM: cee82f2934f844f5d8357561414a028892c94166
+
+COCOAPODS: 1.9.3

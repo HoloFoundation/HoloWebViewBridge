@@ -21,20 +21,20 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/gonghonglou/HoloWebViewBridge'
+  s.homepage         = 'https://github.com/HoloFoundation/HoloWebViewBridge'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'gonghonglou' => 'gonghonglou@icloud.com' }
-  s.source           = { :git => 'https://github.com/gonghonglou/HoloWebViewBridge.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/HoloFoundation/HoloWebViewBridge.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '9.0'
 
   s.source_files = 'HoloWebViewBridge/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'HoloWebViewBridge' => ['HoloWebViewBridge/Assets/*.png']
-  # }
+  s.resource_bundles = {
+      'HoloWebViewBridge' => ['HoloWebViewBridge/Assets/*.js']
+  }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
