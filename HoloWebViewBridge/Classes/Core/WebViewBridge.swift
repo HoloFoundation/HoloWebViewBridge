@@ -11,13 +11,22 @@ public class WebViewBridge: NSObject, WKScriptMessageHandler {
     
     public func inject(plugin: WebViewPluginProtocol) {
         let identifier = plugin.identifier
-        let javascript = plugin.javascript
         if self.plugins[identifier] != nil {
             debugPrint("has the identifier: \(identifier)")
         }
         self.plugins[identifier] = plugin
-        self.inject(source: javascript, injectionTime: .atDocumentEnd)
+        
+        let javascript = plugin.javascript
+        if javascript.count > 0 {
+            self.inject(source: javascript, injectionTime: .atDocumentEnd)
+        }
     }
+    
+    public func inject(function identifier: String, handler: ResponseHandler?) {
+        let plugin = WebViewTemplatePlugin(function: identifier, handler: handler)
+        self.inject(plugin: plugin)
+    }
+    
     
     public func remove(plugin identifier: String) {
         if self.plugins[identifier] == nil {

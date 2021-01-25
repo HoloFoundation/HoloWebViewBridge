@@ -16,10 +16,22 @@
             })
         }
     
+        function pluginPrint() {
+            window.bridge.plugin.print({"hello world":"123"})
+        }
+    
     </script>
     <a href="javascript:tapped();">Native Log</a>
+    <br/>
+    
     <br/>
     </script>
     <a href="javascript:alert();">Native Alert</a>
     <br/>
+    
+    <br/>
+    </script>
+    <a href="javascript:pluginPrint();">Native plugin</a>
+    <br/>
+    
 </html>

@@ -38,6 +38,10 @@ class WebViewController: UIViewController {
         _webView.holo.inject(plugin: WebViewLogPlugin())
         _webView.holo.inject(plugin: WebViewAlertPlugin())
         
+        _webView.holo.inject(function: "print") { (args) in
+            print(args)
+        }
+        
         return _webView
     }()
 
