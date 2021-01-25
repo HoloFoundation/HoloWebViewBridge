@@ -8,13 +8,13 @@
 import Foundation
 import WebKit
 
-public typealias ResponseClosure = ((_ args: [Any]) -> Void)
+public typealias ResponseHandler = ((_ args: [Any]) -> Void)
 
 public protocol WebViewPluginProtocol {
-        
-    func identifier() -> String
     
-    func javascript() -> String
+    var identifier: String { get }
+    
+    var javascript: String { get }
     
     func didReceiveMessage(_ fun: String, args: [Any])
     

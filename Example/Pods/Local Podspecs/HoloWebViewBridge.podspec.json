@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "summary": "A short description of HoloWebViewBridge.",
   "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/gonghonglou/HoloWebViewBridge",
+  "homepage": "https://github.com/HoloFoundation/HoloWebViewBridge",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,7 +12,7 @@
     "gonghonglou": "gonghonglou@icloud.com"
   },
   "source": {
-    "git": "https://github.com/gonghonglou/HoloWebViewBridge.git",
+    "git": "https://github.com/HoloFoundation/HoloWebViewBridge.git",
     "tag": "0.1.0"
   },
   "platforms": {

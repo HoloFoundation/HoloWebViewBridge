@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		01643313C08B1CF8360CF01C /* Pods_HoloWebViewBridge_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB91F0BC8035E55611F4ECE2 /* Pods_HoloWebViewBridge_Tests.framework */; };
-		3FD1395B5081A73AAED10A16 /* Pods_HoloWebViewBridge_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CE440CBB5C35A7419CFBFB3 /* Pods_HoloWebViewBridge_Example.framework */; };
+		3B726E47E330AC82211FC362 /* Pods_HoloWebViewBridge_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED5E13E4D28BBF3918D10EF /* Pods_HoloWebViewBridge_Tests.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -19,6 +18,7 @@
 		75077FAF25BD8CE000E7E62C /* WebViewAlertPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75077FAE25BD8CE000E7E62C /* WebViewAlertPlugin.swift */; };
 		75077FB325BD8D7500E7E62C /* alert.js in Resources */ = {isa = PBXBuildFile; fileRef = 75077FB225BD8D7500E7E62C /* alert.js */; };
 		75077FC725BDD44E00E7E62C /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75077FC625BDD44E00E7E62C /* WebViewController.swift */; };
+		9F16D802627337A46FEC998F /* Pods_HoloWebViewBridge_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B49DCBA293C61622EE2E0C2B /* Pods_HoloWebViewBridge_Example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,11 +49,11 @@
 		75077FAE25BD8CE000E7E62C /* WebViewAlertPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewAlertPlugin.swift; sourceTree = "<group>"; };
 		75077FB225BD8D7500E7E62C /* alert.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = alert.js; sourceTree = "<group>"; };
 		75077FC625BDD44E00E7E62C /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
-		7CE440CBB5C35A7419CFBFB3 /* Pods_HoloWebViewBridge_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HoloWebViewBridge_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		875C898C0B1751C9011C6582 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		946DB6A2F391BE60D6DA288D /* Pods-HoloWebViewBridge_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HoloWebViewBridge_Example.release.xcconfig"; path = "Target Support Files/Pods-HoloWebViewBridge_Example/Pods-HoloWebViewBridge_Example.release.xcconfig"; sourceTree = "<group>"; };
 		99276141677C0798B01AEDED /* Pods-HoloWebViewBridge_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HoloWebViewBridge_Example.debug.xcconfig"; path = "Target Support Files/Pods-HoloWebViewBridge_Example/Pods-HoloWebViewBridge_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		BB91F0BC8035E55611F4ECE2 /* Pods_HoloWebViewBridge_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HoloWebViewBridge_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B49DCBA293C61622EE2E0C2B /* Pods_HoloWebViewBridge_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HoloWebViewBridge_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CED5E13E4D28BBF3918D10EF /* Pods_HoloWebViewBridge_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HoloWebViewBridge_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D78AAFBCAFAA090BEAF6D449 /* Pods-HoloWebViewBridge_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HoloWebViewBridge_Tests.release.xcconfig"; path = "Target Support Files/Pods-HoloWebViewBridge_Tests/Pods-HoloWebViewBridge_Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,7 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3FD1395B5081A73AAED10A16 /* Pods_HoloWebViewBridge_Example.framework in Frameworks */,
+				9F16D802627337A46FEC998F /* Pods_HoloWebViewBridge_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,7 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01643313C08B1CF8360CF01C /* Pods_HoloWebViewBridge_Tests.framework in Frameworks */,
+				3B726E47E330AC82211FC362 /* Pods_HoloWebViewBridge_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,8 +173,8 @@
 		D12FAD91FB499BA235428728 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7CE440CBB5C35A7419CFBFB3 /* Pods_HoloWebViewBridge_Example.framework */,
-				BB91F0BC8035E55611F4ECE2 /* Pods_HoloWebViewBridge_Tests.framework */,
+				B49DCBA293C61622EE2E0C2B /* Pods_HoloWebViewBridge_Example.framework */,
+				CED5E13E4D28BBF3918D10EF /* Pods_HoloWebViewBridge_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -190,7 +190,7 @@
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
-				FFB3F6E7EE6A1157A3A78CC6 /* [CP] Embed Pods Frameworks */,
+				572A9A01F93CE4D0742D711E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -284,6 +284,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		572A9A01F93CE4D0742D711E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HoloWebViewBridge_Example/Pods-HoloWebViewBridge_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/HoloWebViewBridge/HoloWebViewBridge.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HoloWebViewBridge.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HoloWebViewBridge_Example/Pods-HoloWebViewBridge_Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		C0B27B7DD881DA211C6595D2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -326,24 +344,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FFB3F6E7EE6A1157A3A78CC6 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-HoloWebViewBridge_Example/Pods-HoloWebViewBridge_Example-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/HoloWebViewBridge/HoloWebViewBridge.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HoloWebViewBridge.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HoloWebViewBridge_Example/Pods-HoloWebViewBridge_Example-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

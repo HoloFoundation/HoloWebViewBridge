@@ -10,13 +10,33 @@ import WebKit
 public class WebViewBridge: NSObject, WKScriptMessageHandler {
     
     public func inject(plugin: WebViewPluginProtocol) {
-        self.plugins[plugin.identifier()] = plugin
-        self.inject(source: plugin.javascript(), injectionTime: .atDocumentEnd)
+        let identifier = plugin.identifier
+        let javascript = plugin.javascript
+        if self.plugins[identifier] != nil {
+            debugPrint("has the identifier: \(identifier)")
+        }
+        self.plugins[identifier] = plugin
+        self.inject(source: javascript, injectionTime: .atDocumentEnd)
+    }
+    
+    public func remove(plugin identifier: String) {
+        if self.plugins[identifier] == nil {
+            debugPrint("no found plugin: \(identifier)")
+            return
+        }
+        self.plugins[identifier] = nil
+        self.webView?.configuration.userContentController.removeAllUserScripts()
+        self.injectMainJavascript()
+        
+        self.plugins.values.forEach { (plugin) in
+            self.inject(source: plugin.javascript, injectionTime: .atDocumentEnd)
+        }
     }
     
     public func removeAllPlugins() {
         self.plugins.removeAll()
         self.webView?.configuration.userContentController.removeAllUserScripts()
+        self.injectMainJavascript()
     }
     
     public func invalidate() {
@@ -44,8 +64,8 @@ public class WebViewBridge: NSObject, WKScriptMessageHandler {
         if let path = Bundle(for: WebViewBridge.self).resourcePath?.appending("/HoloWebViewBridge.bundle"),
            let bundle = Bundle(path: path),
            let jsPath = bundle.path(forResource: "main", ofType: "js"),
-           let mainJavascript = try? String(contentsOfFile: jsPath, encoding: .utf8) {
-            self.inject(source: mainJavascript, injectionTime: .atDocumentStart)
+           let mainJS = try? String(contentsOfFile: jsPath, encoding: .utf8) {
+            self.inject(source: mainJS, injectionTime: .atDocumentStart)
         }
     }
     
@@ -65,7 +85,7 @@ public class WebViewBridge: NSObject, WKScriptMessageHandler {
                     if flags == 0 {
                         return val
                     } else if flags == 1, let val = val as? Int {
-                        let closure: ResponseClosure = { [weak self] params in
+                        let handler: ResponseHandler = { [weak self] params in
                             guard let self = self else { return }
                             if JSONSerialization.isValidJSONObject(params) == true,
                                let data = try? JSONSerialization.data(withJSONObject: params, options: []),
@@ -74,7 +94,7 @@ public class WebViewBridge: NSObject, WKScriptMessageHandler {
                                 self.webView?.evaluateJavaScript(js, completionHandler: nil)
                             }
                         }
-                        return closure
+                        return handler
                     }
                 }
                 return ""

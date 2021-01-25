@@ -20,11 +20,11 @@ public class WebViewLogPlugin: WebViewPluginProtocol {
     
     // MARK: - WebViewPluginProtocol
     
-    public func identifier() -> String {
+    public var identifier: String {
         return "holo.webView.bridge.log"
     }
     
-    public func javascript() -> String {
+    public var javascript: String {
         if let path = Bundle(for: WebViewLogPlugin.self).resourcePath?.appending("/HoloWebViewBridge.bundle"),
            let bundle = Bundle(path: path),
            let jsPath = bundle.path(forResource: "log", ofType: "js"),
