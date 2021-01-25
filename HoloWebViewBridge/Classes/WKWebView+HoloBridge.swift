@@ -9,15 +9,15 @@ import WebKit
 
 public extension WKWebView {
     
-    static var AssociatedKey = "holo.webView.bridge"
+    private static var AssociatedBridgeKey: Void?
     
     var holo: WebViewBridge {
         let webViewBridge: WebViewBridge
-        if let bridge = objc_getAssociatedObject(self, &WKWebView.AssociatedKey) as? WebViewBridge {
+        if let bridge = objc_getAssociatedObject(self, &WKWebView.AssociatedBridgeKey) as? WebViewBridge {
             webViewBridge = bridge
         } else {
             let bridge = WebViewBridge(webView: self)
-            objc_setAssociatedObject(self, &WKWebView.AssociatedKey, bridge, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            objc_setAssociatedObject(self, &WKWebView.AssociatedBridgeKey, bridge, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
             webViewBridge = bridge
         }
         return webViewBridge

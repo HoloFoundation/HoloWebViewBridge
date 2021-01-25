@@ -18,6 +18,7 @@
 		75077FA825BCA53900E7E62C /* demo.html in Resources */ = {isa = PBXBuildFile; fileRef = 75077FA725BCA53900E7E62C /* demo.html */; };
 		75077FAF25BD8CE000E7E62C /* WebViewAlertPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75077FAE25BD8CE000E7E62C /* WebViewAlertPlugin.swift */; };
 		75077FB325BD8D7500E7E62C /* alert.js in Resources */ = {isa = PBXBuildFile; fileRef = 75077FB225BD8D7500E7E62C /* alert.js */; };
+		75077FC725BDD44E00E7E62C /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75077FC625BDD44E00E7E62C /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		75077FA725BCA53900E7E62C /* demo.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = demo.html; sourceTree = "<group>"; };
 		75077FAE25BD8CE000E7E62C /* WebViewAlertPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewAlertPlugin.swift; sourceTree = "<group>"; };
 		75077FB225BD8D7500E7E62C /* alert.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = alert.js; sourceTree = "<group>"; };
+		75077FC625BDD44E00E7E62C /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		7CE440CBB5C35A7419CFBFB3 /* Pods_HoloWebViewBridge_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HoloWebViewBridge_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		875C898C0B1751C9011C6582 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		946DB6A2F391BE60D6DA288D /* Pods-HoloWebViewBridge_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HoloWebViewBridge_Example.release.xcconfig"; path = "Target Support Files/Pods-HoloWebViewBridge_Example/Pods-HoloWebViewBridge_Example.release.xcconfig"; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				75077FA725BCA53900E7E62C /* demo.html */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				75077FC625BDD44E00E7E62C /* WebViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -353,6 +356,7 @@
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				75077FAF25BD8CE000E7E62C /* WebViewAlertPlugin.swift in Sources */,
+				75077FC725BDD44E00E7E62C /* WebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

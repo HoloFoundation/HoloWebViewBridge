@@ -9,29 +9,30 @@ import WebKit
 
 public class WebViewBridge: NSObject, WKScriptMessageHandler {
     
-    public func inject(_ plugin: WebViewPluginProtocol) {
+    public func inject(plugin: WebViewPluginProtocol) {
         self.plugins[plugin.identifier()] = plugin
-        self.inject(plugin.javascript(), injectionTime: .atDocumentEnd)
+        self.inject(source: plugin.javascript(), injectionTime: .atDocumentEnd)
     }
     
-    public func remove(_ plugin: WebViewPluginProtocol) {
-        self.plugins[plugin.identifier()] = nil
-        self.webView.configuration.userContentController.removeScriptMessageHandler(forName: plugin.identifier())
-    }
-    
-    public func removeAll() {
+    public func removeAllPlugins() {
         self.plugins.removeAll()
-        self.webView.configuration.userContentController.removeAllUserScripts()
+        self.webView?.configuration.userContentController.removeAllUserScripts()
+    }
+    
+    public func invalidate() {
+        self.removeAllPlugins()
+        self.webView?.configuration.userContentController.removeScriptMessageHandler(forName: self.messageName)
     }
     
     
-    internal let webView: WKWebView
+    internal weak var webView: WKWebView?
     
     internal init(webView: WKWebView) {
         self.webView = webView
         super.init()
         
-        self.webView.configuration.userContentController.add(self, name: self.messageName)
+        // should remove while deinit
+        self.webView?.configuration.userContentController.add(self, name: self.messageName)
         self.injectMainJavascript()
     }
     
@@ -40,17 +41,17 @@ public class WebViewBridge: NSObject, WKScriptMessageHandler {
     private let messageName = "bridge", identifier = "identifier", selector = "selector", args = "args", flags = "flags", val = "val"
     
     private func injectMainJavascript() {
-        if let path = Bundle.init(for: WebViewBridge.self).resourcePath?.appending("/HoloWebViewBridge.bundle"),
-           let bundle = Bundle.init(path: path),
+        if let path = Bundle(for: WebViewBridge.self).resourcePath?.appending("/HoloWebViewBridge.bundle"),
+           let bundle = Bundle(path: path),
            let jsPath = bundle.path(forResource: "main", ofType: "js"),
            let mainJavascript = try? String(contentsOfFile: jsPath, encoding: .utf8) {
-            self.inject(mainJavascript, injectionTime: .atDocumentStart)
+            self.inject(source: mainJavascript, injectionTime: .atDocumentStart)
         }
     }
     
-    private func inject(_ source: String, injectionTime: WKUserScriptInjectionTime) {
-        let userScript = WKUserScript.init(source: source, injectionTime: injectionTime, forMainFrameOnly: false)
-        self.webView.configuration.userContentController.addUserScript(userScript)
+    private func inject(source: String, injectionTime: WKUserScriptInjectionTime) {
+        let userScript = WKUserScript(source: source, injectionTime: injectionTime, forMainFrameOnly: false)
+        self.webView?.configuration.userContentController.addUserScript(userScript)
     }
     
     private func js_msgSend(_ parameters: [String:Any]) {
@@ -64,12 +65,13 @@ public class WebViewBridge: NSObject, WKScriptMessageHandler {
                     if flags == 0 {
                         return val
                     } else if flags == 1, let val = val as? Int {
-                        let closure: ResponseClosure = { params in
+                        let closure: ResponseClosure = { [weak self] params in
+                            guard let self = self else { return }
                             if JSONSerialization.isValidJSONObject(params) == true,
                                let data = try? JSONSerialization.data(withJSONObject: params, options: []),
-                               let json = String.init(data: data, encoding: .utf8) {
+                               let json = String(data: data, encoding: .utf8) {
                                 let js = String(format: "window.bridge.closureDispatcher.invoke(%zd, %@)", val, json)
-                                self.webView.evaluateJavaScript(js, completionHandler: nil)
+                                self.webView?.evaluateJavaScript(js, completionHandler: nil)
                             }
                         }
                         return closure

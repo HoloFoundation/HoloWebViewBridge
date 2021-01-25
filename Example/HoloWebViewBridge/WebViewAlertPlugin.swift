@@ -11,6 +11,10 @@ import HoloWebViewBridge
 
 class WebViewAlertPlugin: WebViewPluginProtocol {
     
+    deinit {
+        print("WebViewAlertPlugin deinit")
+    }
+    
     public init() {}
     
     // MARK: - AlertPlugin method
@@ -18,11 +22,10 @@ class WebViewAlertPlugin: WebViewPluginProtocol {
     var responseClosure: ResponseClosure?
     
     func alert(_ msg: String) {
-        let alertVC = UIAlertController.init(title: msg, message: nil, preferredStyle: .alert)
-        let action = UIAlertAction.init(title: "Confirm", style: .cancel) { [weak self] (action) in
-            if let self = self {
-                self.responseClosure?(["hello", "world", 1])
-            }
+        let alertVC = UIAlertController(title: msg, message: nil, preferredStyle: .alert)
+        let action = UIAlertAction(title: "Confirm", style: .cancel) { [weak self] (action) in
+            guard let self = self else { return }
+            self.responseClosure?(["hello", "world", 1])
         }
         alertVC.addAction(action)
         UIApplication.shared.keyWindow?.rootViewController?.present(alertVC, animated: true, completion: nil)
@@ -36,7 +39,7 @@ class WebViewAlertPlugin: WebViewPluginProtocol {
     }
     
     func javascript() -> String {
-        if let path = Bundle.init(for: ViewController.self).path(forResource: "alert", ofType: "js"),
+        if let path = Bundle(for: ViewController.self).path(forResource: "alert", ofType: "js"),
            let js = try? String(contentsOfFile: path, encoding: .utf8) {
             return js
         }

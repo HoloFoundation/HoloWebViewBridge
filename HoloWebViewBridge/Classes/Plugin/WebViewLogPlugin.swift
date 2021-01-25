@@ -25,8 +25,8 @@ public class WebViewLogPlugin: WebViewPluginProtocol {
     }
     
     public func javascript() -> String {
-        if let path = Bundle.init(for: WebViewLogPlugin.self).resourcePath?.appending("/HoloWebViewBridge.bundle"),
-           let bundle = Bundle.init(path: path),
+        if let path = Bundle(for: WebViewLogPlugin.self).resourcePath?.appending("/HoloWebViewBridge.bundle"),
+           let bundle = Bundle(path: path),
            let jsPath = bundle.path(forResource: "log", ofType: "js"),
            let js = try? String(contentsOfFile: jsPath, encoding: .utf8) {
             return js
