@@ -10,6 +10,8 @@ import WebKit
 
 public typealias ResponseHandler = ((_ args: [Any]) -> Void)
 
+public typealias ResponseCallbackHandler = ((_ args: [Any], _ callback: ResponseHandler?) -> Void)
+
 public protocol WebViewPluginProtocol {
     
     var identifier: String { get }

@@ -27,6 +27,11 @@ public class WebViewBridge: NSObject, WKScriptMessageHandler {
         self.inject(plugin: plugin)
     }
     
+    public func inject(function identifier: String, callbackHandler: ResponseCallbackHandler?) {
+        let plugin = WebViewTemplatePlugin(function: identifier, callbackHandler: callbackHandler)
+        self.inject(plugin: plugin)
+    }
+    
     
     public func remove(plugin identifier: String) {
         if self.plugins[identifier] == nil {

@@ -13,8 +13,8 @@ import HoloWebViewBridge
 class WebViewController: UIViewController {
     
     deinit {
-        print("WebViewController deinit")
         self.webView.holo.invalidate()
+        print("WebViewController deinit")
     }
 
     override func viewDidLoad() {
@@ -31,18 +31,32 @@ class WebViewController: UIViewController {
     }
 
 
-    lazy var webView: WKWebView = {
+    lazy var webView: MyWebView = {
         let _configuration = WKWebViewConfiguration()
-        let _webView = WKWebView(frame: CGRect(x: 0, y: 200, width: UIScreen.main.bounds.width, height: 400), configuration: _configuration)
+        let _webView = MyWebView(frame: CGRect(x: 0, y: 200, width: UIScreen.main.bounds.width, height: 400), configuration: _configuration)
         
         _webView.holo.inject(plugin: WebViewLogPlugin())
         _webView.holo.inject(plugin: WebViewAlertPlugin())
-        
-        _webView.holo.inject(function: "print") { (args) in
+
+//        _webView.holo.inject(function: "print") { (args) in
+//            print(args)
+//        }
+
+        _webView.holo.inject(function: "printCallback") { (args, handler) in
             print(args)
+            handler?(["1", "2"])
         }
+
         
         return _webView
     }()
 
+}
+
+
+class MyWebView: WKWebView {
+    
+    deinit {
+        print("MyWebView deinit")
+    }
 }

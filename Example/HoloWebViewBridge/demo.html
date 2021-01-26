@@ -20,6 +20,12 @@
             window.bridge.plugin.print({"hello world":"123"})
         }
     
+        function pluginPrintCallback() {
+            window.bridge.plugin.printCallback("hello world", function(msg) {
+                window.bridge.log(msg)
+            })
+        }
+    
     </script>
     <a href="javascript:tapped();">Native Log</a>
     <br/>
@@ -31,7 +37,12 @@
     
     <br/>
     </script>
-    <a href="javascript:pluginPrint();">Native plugin</a>
+    <a href="javascript:pluginPrint();">Native Plugin Handler</a>
+    <br/>
+    
+    <br/>
+    </script>
+    <a href="javascript:pluginPrintCallback();">Native Plugin Handler Callback</a>
     <br/>
     
 </html>

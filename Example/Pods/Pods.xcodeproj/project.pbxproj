@@ -7,92 +7,98 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		029FEC158F711E90669DA381E1A7F468 /* template.js in Resources */ = {isa = PBXBuildFile; fileRef = 6C8B400F1BE4850FB3475F5D829AEDC2 /* template.js */; };
-		09C69ED14B7A7779EE48E4BA9F998F85 /* WKWebView+HoloBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2341E45CD90EE98E32CDCC415FECC435 /* WKWebView+HoloBridge.swift */; };
 		0E2AEEAFA1D6C983C880B2246D5CD22F /* Pods-HoloWebViewBridge_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 60BAC18822DC3C85DEF3CD4BABB892E7 /* Pods-HoloWebViewBridge_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		26E0481E9B06401952DD3B411AD2F4EE /* WebViewPluginProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E83F18B98EC696F5DE3092877D5C29D /* WebViewPluginProtocol.swift */; };
-		3D5E6B362A49970F1F876EF961172278 /* log.js in Resources */ = {isa = PBXBuildFile; fileRef = B3EF6BE0FB64D910EDB1DDA7A391EE92 /* log.js */; };
+		101AB0BB6084E9C9AEA600A1CDE7F293 /* main.js in Resources */ = {isa = PBXBuildFile; fileRef = EEE3729771E00ADD6EF8A841EEADE980 /* main.js */; };
+		180636278CF5770FA29E003F098DD648 /* template.js in Resources */ = {isa = PBXBuildFile; fileRef = CE538ED647728B047EF62E9C39825F68 /* template.js */; };
+		1D8E725B13E46BCE9A4EB4AA5AD8345B /* template_callback.js in Resources */ = {isa = PBXBuildFile; fileRef = AAAEC889E9FD07C11224AD5181112707 /* template_callback.js */; };
+		22FAF6CF4CF00DE5E9FACFE28AD8E328 /* HoloWebViewBridge.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6E0D15E7E26A4E299ECB2D2A8A01E4A2 /* HoloWebViewBridge.bundle */; };
+		293414092E89F28DB1B2CCFA0678D596 /* WebViewTemplatePlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B953CDBB4D6E5951B16A4FDB49C86B7 /* WebViewTemplatePlugin.swift */; };
 		56491981CCBB8681097D38493F9B805A /* Pods-HoloWebViewBridge_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 76884A41C93E1F5050DDC468EA23DE0F /* Pods-HoloWebViewBridge_Tests-dummy.m */; };
 		5A71A351945A4A29C5925F6BBBE8EB38 /* Pods-HoloWebViewBridge_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D66D8C24201287097659BD25A8B5CA1 /* Pods-HoloWebViewBridge_Example-dummy.m */; };
-		6986E8606F2107272F56588C5F63F098 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		75EBC8E525BEF33A006894F9 /* WebViewTemplatePlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75EBC8E425BEF33A006894F9 /* WebViewTemplatePlugin.swift */; };
+		653E43DEE0DFC37B8A8133FFE2AB11FA /* WKWebView+HoloBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 9186413DF3767BFEE26F56B8D03FAA27 /* WKWebView+HoloBridge.m */; };
 		7C1FA287FF527F2107227157D6B95556 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		7FB94CCAF8F06D21AEAC52CDCF7F3F5B /* HoloWebViewBridge.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6E0D15E7E26A4E299ECB2D2A8A01E4A2 /* HoloWebViewBridge.bundle */; };
+		824AFE6B761B8C0DBB74C28117A524CC /* WKWebView+HoloBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D9A89D403C344559821D096E70E3B01 /* WKWebView+HoloBridge.swift */; };
+		83FCC6B4AD2EFB05ABDFA508146E6451 /* WebViewPluginProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD48C8AA748F578A31D295F19F39026 /* WebViewPluginProtocol.swift */; };
 		9643414C3287D13C15AAF934CC927731 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		A429B2128A0846BC5640E838103A330E /* WebViewBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C81EF03C46467971DA9B66F6244E0BC /* WebViewBridge.swift */; };
-		B834530DA9B1A34FB5B253EB50728E7E /* HoloWebViewBridge-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B1B4F83D03E952D942EB302D85FB2F /* HoloWebViewBridge-dummy.m */; };
+		9899D579CA6C8528FFB794B88AF1F927 /* HoloWebViewBridge-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A841991D86C7681EBFDF887C01856B4 /* HoloWebViewBridge-dummy.m */; };
+		D804AF04EC820FDF587D2377BFE07E38 /* WKWebView+HoloBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = F71343DFDD16673D95446ED3539EA6A3 /* WKWebView+HoloBridge.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD780E766355774DC59DA4A5FD052B7A /* log.js in Resources */ = {isa = PBXBuildFile; fileRef = 75861FD6CF14A5B3DF879346452D7459 /* log.js */; };
 		E27694661E285D5999051A783EED2C04 /* Pods-HoloWebViewBridge_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5591B3B271DDEE6FC0EC728E70015F9D /* Pods-HoloWebViewBridge_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E78D21FD372C34801703DC55ADF491B6 /* HoloWebViewBridge-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BF1224546F82C0AC51F6A0D2CE6496C8 /* HoloWebViewBridge-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F0B531E0B34BB4D66D32C1F9D1621369 /* WebViewLogPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48B5C5FF73E46C49876C1B115588FFF2 /* WebViewLogPlugin.swift */; };
-		FB858F50CE1FF35F9CA1004FA070260B /* main.js in Resources */ = {isa = PBXBuildFile; fileRef = 93EAA5999BE58883048EC8098B12981A /* main.js */; };
+		EC598629B6CD2766B9CF0A16AE58507A /* WebViewLogPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83D1E09347819070991355CB5D85239A /* WebViewLogPlugin.swift */; };
+		EC953675946A53720656ADA580745A15 /* WebViewBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6188A49F2ED86FD654B9F880C0B6D17 /* WebViewBridge.swift */; };
+		ED9C1C8E962F0D9274C088C3D053B287 /* HoloWebViewBridge-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AE605E1150A0CE57705439C0131BF7A5 /* HoloWebViewBridge-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FEE40A2102FE8090AEC417C61CA874CC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		038EC0EEB3E0129DA2098ADAD979DC47 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3E4077949B37DC37E9BBB1482D8F98EE;
-			remoteInfo = HoloWebViewBridge;
-		};
-		6DEFA49F9EC07B0D0F686C379555FDDF /* PBXContainerItemProxy */ = {
+		60D1D509256EEE638738C1F9DAE45DAF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = D1353FFA6119AA8AAE036ED173FE1297;
 			remoteInfo = "HoloWebViewBridge-HoloWebViewBridge";
 		};
-		FE13CDC9044B5A9ACF44067D3C7A592B /* PBXContainerItemProxy */ = {
+		804B36B5388BCB21440019678BD5C310 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 16AA27790E665D7B982A8F70CA18CAE1;
 			remoteInfo = "Pods-HoloWebViewBridge_Example";
 		};
+		F66CCB13EE94E942AAAEEEE6F0FC2A37 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3E4077949B37DC37E9BBB1482D8F98EE;
+			remoteInfo = HoloWebViewBridge;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0D8E69FA17F8802EF033B5C715C165FF /* HoloWebViewBridge-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HoloWebViewBridge-prefix.pch"; sourceTree = "<group>"; };
-		2341E45CD90EE98E32CDCC415FECC435 /* WKWebView+HoloBridge.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "WKWebView+HoloBridge.swift"; path = "HoloWebViewBridge/Classes/WKWebView+HoloBridge.swift"; sourceTree = "<group>"; };
-		23C77D99F79ED4141D17736627CC2D8B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		30A3F62DF7BD2D58B5AFB43F6DD2D289 /* Pods_HoloWebViewBridge_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HoloWebViewBridge_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0690ACFA21584874C02528ED69EBA580 /* HoloWebViewBridge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HoloWebViewBridge.release.xcconfig; sourceTree = "<group>"; };
+		2922B553002D124EEDAFF6285F8422C3 /* HoloWebViewBridge-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "HoloWebViewBridge-Info.plist"; sourceTree = "<group>"; };
+		2D9A89D403C344559821D096E70E3B01 /* WKWebView+HoloBridge.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "WKWebView+HoloBridge.swift"; path = "HoloWebViewBridge/Classes/WKWebView+HoloBridge.swift"; sourceTree = "<group>"; };
+		30A3F62DF7BD2D58B5AFB43F6DD2D289 /* Pods_HoloWebViewBridge_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_HoloWebViewBridge_Example.framework; path = "Pods-HoloWebViewBridge_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		357535B164665446381236873FAD42BD /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		39EAAB0F5C10F4CF53F7764B7E83AE6A /* Pods-HoloWebViewBridge_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HoloWebViewBridge_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		44725C4CB5A489053D7E4410856E5FC7 /* Pods-HoloWebViewBridge_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HoloWebViewBridge_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		45DD7F489C9CE8B6DDE4BAEA95D4A85D /* Pods-HoloWebViewBridge_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-HoloWebViewBridge_Example-frameworks.sh"; sourceTree = "<group>"; };
-		48B5C5FF73E46C49876C1B115588FFF2 /* WebViewLogPlugin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WebViewLogPlugin.swift; sourceTree = "<group>"; };
+		4A841991D86C7681EBFDF887C01856B4 /* HoloWebViewBridge-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HoloWebViewBridge-dummy.m"; sourceTree = "<group>"; };
+		4C1B85767CECAECF142B4FEBF8DBB079 /* HoloWebViewBridge.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = HoloWebViewBridge.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		4D66D8C24201287097659BD25A8B5CA1 /* Pods-HoloWebViewBridge_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HoloWebViewBridge_Example-dummy.m"; sourceTree = "<group>"; };
+		51A789843EA589AF1A4229E387093725 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		5591B3B271DDEE6FC0EC728E70015F9D /* Pods-HoloWebViewBridge_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HoloWebViewBridge_Tests-umbrella.h"; sourceTree = "<group>"; };
-		57B3338D368CB3C981FB152B29528BDF /* ResourceBundle-HoloWebViewBridge-HoloWebViewBridge-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-HoloWebViewBridge-HoloWebViewBridge-Info.plist"; sourceTree = "<group>"; };
-		59347557ECF30BBC97DFE9DBEAE99046 /* HoloWebViewBridge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HoloWebViewBridge.release.xcconfig; sourceTree = "<group>"; };
-		59B1B4F83D03E952D942EB302D85FB2F /* HoloWebViewBridge-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HoloWebViewBridge-dummy.m"; sourceTree = "<group>"; };
+		5AD48C8AA748F578A31D295F19F39026 /* WebViewPluginProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WebViewPluginProtocol.swift; sourceTree = "<group>"; };
 		60BAC18822DC3C85DEF3CD4BABB892E7 /* Pods-HoloWebViewBridge_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HoloWebViewBridge_Example-umbrella.h"; sourceTree = "<group>"; };
 		60DDC4B3588642669B07AFD76E773BEA /* Pods-HoloWebViewBridge_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-HoloWebViewBridge_Example.modulemap"; sourceTree = "<group>"; };
-		644A986546729C97518165E8F9E8ACB9 /* HoloWebViewBridge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HoloWebViewBridge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6C8B400F1BE4850FB3475F5D829AEDC2 /* template.js */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.javascript; name = template.js; path = HoloWebViewBridge/Assets/template.js; sourceTree = "<group>"; };
-		6E0D15E7E26A4E299ECB2D2A8A01E4A2 /* HoloWebViewBridge.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HoloWebViewBridge.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		644A986546729C97518165E8F9E8ACB9 /* HoloWebViewBridge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = HoloWebViewBridge.framework; path = HoloWebViewBridge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E0D15E7E26A4E299ECB2D2A8A01E4A2 /* HoloWebViewBridge.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = HoloWebViewBridge.bundle; path = "HoloWebViewBridge-HoloWebViewBridge.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		75EBC8E425BEF33A006894F9 /* WebViewTemplatePlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewTemplatePlugin.swift; sourceTree = "<group>"; };
+		75861FD6CF14A5B3DF879346452D7459 /* log.js */ = {isa = PBXFileReference; includeInIndex = 1; name = log.js; path = HoloWebViewBridge/Assets/log.js; sourceTree = "<group>"; };
 		76884A41C93E1F5050DDC468EA23DE0F /* Pods-HoloWebViewBridge_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HoloWebViewBridge_Tests-dummy.m"; sourceTree = "<group>"; };
 		7B72C42849727CFE954333AD2839C069 /* Pods-HoloWebViewBridge_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HoloWebViewBridge_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		7C46C0EDEBF4474C695445F9F0DD87A3 /* HoloWebViewBridge.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = HoloWebViewBridge.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		7CE751EE69BF825D660831D15C5E639F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		7B953CDBB4D6E5951B16A4FDB49C86B7 /* WebViewTemplatePlugin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WebViewTemplatePlugin.swift; sourceTree = "<group>"; };
 		815744F4F068FEAE47225C011B267985 /* Pods-HoloWebViewBridge_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-HoloWebViewBridge_Tests.modulemap"; sourceTree = "<group>"; };
-		8E83F18B98EC696F5DE3092877D5C29D /* WebViewPluginProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WebViewPluginProtocol.swift; sourceTree = "<group>"; };
+		82DD0E0C22DA45DF5416569C30F04B80 /* HoloWebViewBridge.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = HoloWebViewBridge.modulemap; sourceTree = "<group>"; };
+		83D1E09347819070991355CB5D85239A /* WebViewLogPlugin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WebViewLogPlugin.swift; sourceTree = "<group>"; };
+		9186413DF3767BFEE26F56B8D03FAA27 /* WKWebView+HoloBridge.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WKWebView+HoloBridge.m"; sourceTree = "<group>"; };
 		9344CDD8D45DE4DD35CCAABA75A6206C /* Pods-HoloWebViewBridge_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HoloWebViewBridge_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		93EAA5999BE58883048EC8098B12981A /* main.js */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.javascript; name = main.js; path = HoloWebViewBridge/Assets/main.js; sourceTree = "<group>"; };
 		94AF3D77EFB63EEDAC6DFFECD726F91D /* Pods-HoloWebViewBridge_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HoloWebViewBridge_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		9C81EF03C46467971DA9B66F6244E0BC /* WebViewBridge.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WebViewBridge.swift; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9F0507DE5B86AB204195805EF9BA5CF2 /* HoloWebViewBridge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HoloWebViewBridge.debug.xcconfig; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A6188A49F2ED86FD654B9F880C0B6D17 /* WebViewBridge.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WebViewBridge.swift; sourceTree = "<group>"; };
+		AAAEC889E9FD07C11224AD5181112707 /* template_callback.js */ = {isa = PBXFileReference; includeInIndex = 1; name = template_callback.js; path = HoloWebViewBridge/Assets/template_callback.js; sourceTree = "<group>"; };
 		AD69CD7660098DB4FFC042EF427F9BE9 /* Pods-HoloWebViewBridge_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HoloWebViewBridge_Tests-Info.plist"; sourceTree = "<group>"; };
 		AE13FA46068F81FEA9B4E9D89A517815 /* Pods-HoloWebViewBridge_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-HoloWebViewBridge_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		B3EF6BE0FB64D910EDB1DDA7A391EE92 /* log.js */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.javascript; name = log.js; path = HoloWebViewBridge/Assets/log.js; sourceTree = "<group>"; };
+		AE605E1150A0CE57705439C0131BF7A5 /* HoloWebViewBridge-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HoloWebViewBridge-umbrella.h"; sourceTree = "<group>"; };
 		B8DFA58A6A2BD7A9A3BD1F9E4CB52ED4 /* Pods-HoloWebViewBridge_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-HoloWebViewBridge_Example-Info.plist"; sourceTree = "<group>"; };
-		BF1224546F82C0AC51F6A0D2CE6496C8 /* HoloWebViewBridge-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HoloWebViewBridge-umbrella.h"; sourceTree = "<group>"; };
-		D8443426EB0D3FBAF49B94A9F97DA182 /* HoloWebViewBridge.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = HoloWebViewBridge.modulemap; sourceTree = "<group>"; };
-		E503D5413DA060165805B39625A7C889 /* Pods_HoloWebViewBridge_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HoloWebViewBridge_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE538ED647728B047EF62E9C39825F68 /* template.js */ = {isa = PBXFileReference; includeInIndex = 1; name = template.js; path = HoloWebViewBridge/Assets/template.js; sourceTree = "<group>"; };
+		CE899772E8A49F0C35F2EA1DB1B946B1 /* ResourceBundle-HoloWebViewBridge-HoloWebViewBridge-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-HoloWebViewBridge-HoloWebViewBridge-Info.plist"; sourceTree = "<group>"; };
+		DE7DA14568A29A5AA324A9E85CF56288 /* HoloWebViewBridge-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HoloWebViewBridge-prefix.pch"; sourceTree = "<group>"; };
+		E503D5413DA060165805B39625A7C889 /* Pods_HoloWebViewBridge_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_HoloWebViewBridge_Tests.framework; path = "Pods-HoloWebViewBridge_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBE4910310E796B020974303F9915166 /* HoloWebViewBridge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HoloWebViewBridge.debug.xcconfig; sourceTree = "<group>"; };
+		EEE3729771E00ADD6EF8A841EEADE980 /* main.js */ = {isa = PBXFileReference; includeInIndex = 1; name = main.js; path = HoloWebViewBridge/Assets/main.js; sourceTree = "<group>"; };
 		F6B69F00217F9724181C2AF35A982AB1 /* Pods-HoloWebViewBridge_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HoloWebViewBridge_Example.release.xcconfig"; sourceTree = "<group>"; };
-		FEE03154602EA86632DF2679C5F76DA9 /* HoloWebViewBridge-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "HoloWebViewBridge-Info.plist"; sourceTree = "<group>"; };
+		F71343DFDD16673D95446ED3539EA6A3 /* WKWebView+HoloBridge.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WKWebView+HoloBridge.h"; sourceTree = "<group>"; };
 		FF8028631D2F7AAF369D9A4396AC7BBD /* Pods-HoloWebViewBridge_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HoloWebViewBridge_Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,10 +111,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3010DD0FCB8B7651B3E86A90420D6C16 /* Frameworks */ = {
+		8ADA4C18F98F82C0C4266C4247CA6E59 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E09D58A096CDE8D1540D2820A617C8FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FEE40A2102FE8090AEC417C61CA874CC /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,66 +134,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FE062391F2BE50B37C826EDCE1241C5B /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6986E8606F2107272F56588C5F63F098 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		128AFA4FC2EAB088FF6D5A977E474C52 /* Core */ = {
+		13E1F5B8B748AA566BFAC0C89055A63C /* Plugin */ = {
 			isa = PBXGroup;
 			children = (
-				9C81EF03C46467971DA9B66F6244E0BC /* WebViewBridge.swift */,
-				8E83F18B98EC696F5DE3092877D5C29D /* WebViewPluginProtocol.swift */,
-				75EBC8E425BEF33A006894F9 /* WebViewTemplatePlugin.swift */,
+				83D1E09347819070991355CB5D85239A /* WebViewLogPlugin.swift */,
 			);
-			name = Core;
-			path = HoloWebViewBridge/Classes/Core;
-			sourceTree = "<group>";
-		};
-		277B09504E9BF07C4F7795BC27143860 /* HoloWebViewBridge */ = {
-			isa = PBXGroup;
-			children = (
-				2341E45CD90EE98E32CDCC415FECC435 /* WKWebView+HoloBridge.swift */,
-				128AFA4FC2EAB088FF6D5A977E474C52 /* Core */,
-				9E15F563B853CFA600C9EE262B524DDC /* Plugin */,
-				6E57EB3127BAFEBF5B5BB35CED2CFCE4 /* Pod */,
-				3291B8D3F4792D6A4229529C92853AD3 /* Resources */,
-				2A51F2A293C627274CE2679AB9A9A8E2 /* Support Files */,
-			);
-			name = HoloWebViewBridge;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		2A51F2A293C627274CE2679AB9A9A8E2 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				D8443426EB0D3FBAF49B94A9F97DA182 /* HoloWebViewBridge.modulemap */,
-				59B1B4F83D03E952D942EB302D85FB2F /* HoloWebViewBridge-dummy.m */,
-				FEE03154602EA86632DF2679C5F76DA9 /* HoloWebViewBridge-Info.plist */,
-				0D8E69FA17F8802EF033B5C715C165FF /* HoloWebViewBridge-prefix.pch */,
-				BF1224546F82C0AC51F6A0D2CE6496C8 /* HoloWebViewBridge-umbrella.h */,
-				9F0507DE5B86AB204195805EF9BA5CF2 /* HoloWebViewBridge.debug.xcconfig */,
-				59347557ECF30BBC97DFE9DBEAE99046 /* HoloWebViewBridge.release.xcconfig */,
-				57B3338D368CB3C981FB152B29528BDF /* ResourceBundle-HoloWebViewBridge-HoloWebViewBridge-Info.plist */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/HoloWebViewBridge";
-			sourceTree = "<group>";
-		};
-		3291B8D3F4792D6A4229529C92853AD3 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				B3EF6BE0FB64D910EDB1DDA7A391EE92 /* log.js */,
-				93EAA5999BE58883048EC8098B12981A /* main.js */,
-				6C8B400F1BE4850FB3475F5D829AEDC2 /* template.js */,
-			);
-			name = Resources;
+			name = Plugin;
+			path = HoloWebViewBridge/Classes/Plugin;
 			sourceTree = "<group>";
 		};
 		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
@@ -190,14 +154,43 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		6E57EB3127BAFEBF5B5BB35CED2CFCE4 /* Pod */ = {
+		58428719A983E8C212EFDFBC7A91E389 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				7C46C0EDEBF4474C695445F9F0DD87A3 /* HoloWebViewBridge.podspec */,
-				7CE751EE69BF825D660831D15C5E639F /* LICENSE */,
-				23C77D99F79ED4141D17736627CC2D8B /* README.md */,
+				4C1B85767CECAECF142B4FEBF8DBB079 /* HoloWebViewBridge.podspec */,
+				51A789843EA589AF1A4229E387093725 /* LICENSE */,
+				357535B164665446381236873FAD42BD /* README.md */,
 			);
 			name = Pod;
+			sourceTree = "<group>";
+		};
+		5A6627ED1D950E0D41E2D6EAC09529EE /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				A6188A49F2ED86FD654B9F880C0B6D17 /* WebViewBridge.swift */,
+				5AD48C8AA748F578A31D295F19F39026 /* WebViewPluginProtocol.swift */,
+				7B953CDBB4D6E5951B16A4FDB49C86B7 /* WebViewTemplatePlugin.swift */,
+				F71343DFDD16673D95446ED3539EA6A3 /* WKWebView+HoloBridge.h */,
+				9186413DF3767BFEE26F56B8D03FAA27 /* WKWebView+HoloBridge.m */,
+			);
+			name = Core;
+			path = HoloWebViewBridge/Classes/Core;
+			sourceTree = "<group>";
+		};
+		80B08D795B52034FFADD7BCC343DC803 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				82DD0E0C22DA45DF5416569C30F04B80 /* HoloWebViewBridge.modulemap */,
+				4A841991D86C7681EBFDF887C01856B4 /* HoloWebViewBridge-dummy.m */,
+				2922B553002D124EEDAFF6285F8422C3 /* HoloWebViewBridge-Info.plist */,
+				DE7DA14568A29A5AA324A9E85CF56288 /* HoloWebViewBridge-prefix.pch */,
+				AE605E1150A0CE57705439C0131BF7A5 /* HoloWebViewBridge-umbrella.h */,
+				EBE4910310E796B020974303F9915166 /* HoloWebViewBridge.debug.xcconfig */,
+				0690ACFA21584874C02528ED69EBA580 /* HoloWebViewBridge.release.xcconfig */,
+				CE899772E8A49F0C35F2EA1DB1B946B1 /* ResourceBundle-HoloWebViewBridge-HoloWebViewBridge-Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/HoloWebViewBridge";
 			sourceTree = "<group>";
 		};
 		90F59E525F2A8CB4EAB10C17804AE605 /* Pods-HoloWebViewBridge_Tests */ = {
@@ -216,13 +209,15 @@
 			path = "Target Support Files/Pods-HoloWebViewBridge_Tests";
 			sourceTree = "<group>";
 		};
-		9E15F563B853CFA600C9EE262B524DDC /* Plugin */ = {
+		AE62C13D51BB4E043D1732D306220C3E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				48B5C5FF73E46C49876C1B115588FFF2 /* WebViewLogPlugin.swift */,
+				75861FD6CF14A5B3DF879346452D7459 /* log.js */,
+				EEE3729771E00ADD6EF8A841EEADE980 /* main.js */,
+				CE538ED647728B047EF62E9C39825F68 /* template.js */,
+				AAAEC889E9FD07C11224AD5181112707 /* template_callback.js */,
 			);
-			name = Plugin;
-			path = HoloWebViewBridge/Classes/Plugin;
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		BD3040101923D729019BFCDE71311379 /* Pods-HoloWebViewBridge_Example */ = {
@@ -284,9 +279,23 @@
 		DF84061CC343FD5C0B833F0635B6E45D /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				277B09504E9BF07C4F7795BC27143860 /* HoloWebViewBridge */,
+				FB7DA3B547C3A007B5CE08DE40B66AC7 /* HoloWebViewBridge */,
 			);
 			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		FB7DA3B547C3A007B5CE08DE40B66AC7 /* HoloWebViewBridge */ = {
+			isa = PBXGroup;
+			children = (
+				2D9A89D403C344559821D096E70E3B01 /* WKWebView+HoloBridge.swift */,
+				5A6627ED1D950E0D41E2D6EAC09529EE /* Core */,
+				13E1F5B8B748AA566BFAC0C89055A63C /* Plugin */,
+				58428719A983E8C212EFDFBC7A91E389 /* Pod */,
+				AE62C13D51BB4E043D1732D306220C3E /* Resources */,
+				80B08D795B52034FFADD7BCC343DC803 /* Support Files */,
+			);
+			name = HoloWebViewBridge;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,11 +317,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B4930CB59D2C1D40B2882AC5D6715E7C /* Headers */ = {
+		F8C2B3CFEEC2409F55E1C73EE9798976 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E78D21FD372C34801703DC55ADF491B6 /* HoloWebViewBridge-umbrella.h in Headers */,
+				ED9C1C8E962F0D9274C088C3D053B287 /* HoloWebViewBridge-umbrella.h in Headers */,
+				D804AF04EC820FDF587D2377BFE07E38 /* WKWebView+HoloBridge.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,7 +341,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				86C689BDB578B2C53FCE17A32236CAE4 /* PBXTargetDependency */,
+				039BC4F5EE0B5FB90C14AF6A6FB88D41 /* PBXTargetDependency */,
 			);
 			name = "Pods-HoloWebViewBridge_Example";
 			productName = "Pods-HoloWebViewBridge_Example";
@@ -340,17 +350,17 @@
 		};
 		3E4077949B37DC37E9BBB1482D8F98EE /* HoloWebViewBridge */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E5D19D7E83EB6DA3A2452B954E266981 /* Build configuration list for PBXNativeTarget "HoloWebViewBridge" */;
+			buildConfigurationList = F682DF65E4627A8BE95F1F0CC2EA5CC4 /* Build configuration list for PBXNativeTarget "HoloWebViewBridge" */;
 			buildPhases = (
-				B4930CB59D2C1D40B2882AC5D6715E7C /* Headers */,
-				DCF8065D644E4C080C0CCAE0BF164331 /* Sources */,
-				FE062391F2BE50B37C826EDCE1241C5B /* Frameworks */,
-				FAB5399A027020165A5762238ABC6003 /* Resources */,
+				F8C2B3CFEEC2409F55E1C73EE9798976 /* Headers */,
+				4E2B58F6EA00259A1440849A5B58CD4C /* Sources */,
+				E09D58A096CDE8D1540D2820A617C8FB /* Frameworks */,
+				1378AF9DFD7D1398297127E9239721F5 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				4F436A0E106709292B0DC7925F98A9A5 /* PBXTargetDependency */,
+				556D59496D12725B8665A0D3A6BD207A /* PBXTargetDependency */,
 			);
 			name = HoloWebViewBridge;
 			productName = HoloWebViewBridge;
@@ -369,7 +379,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				A915B262D55937DD82127BD7BE95D733 /* PBXTargetDependency */,
+				83E77D5AA831F21540245670B6A388F0 /* PBXTargetDependency */,
 			);
 			name = "Pods-HoloWebViewBridge_Tests";
 			productName = "Pods-HoloWebViewBridge_Tests";
@@ -378,11 +388,11 @@
 		};
 		D1353FFA6119AA8AAE036ED173FE1297 /* HoloWebViewBridge-HoloWebViewBridge */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 93CF4D0854F58D46A1ADDCB8F9ED9312 /* Build configuration list for PBXNativeTarget "HoloWebViewBridge-HoloWebViewBridge" */;
+			buildConfigurationList = 839CE3F73B42973A3AB3A30A26BBCE49 /* Build configuration list for PBXNativeTarget "HoloWebViewBridge-HoloWebViewBridge" */;
 			buildPhases = (
-				59F194F3AC431455DC69FB3605DB321F /* Sources */,
-				3010DD0FCB8B7651B3E86A90420D6C16 /* Frameworks */,
-				001697B10E52AC3B823825443146E868 /* Resources */,
+				2495D8EC880642D6645F741CAF534576 /* Sources */,
+				8ADA4C18F98F82C0C4266C4247CA6E59 /* Frameworks */,
+				CDBDB90F26C5172DBCF4A0D3BA353644 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -424,13 +434,11 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		001697B10E52AC3B823825443146E868 /* Resources */ = {
+		1378AF9DFD7D1398297127E9239721F5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D5E6B362A49970F1F876EF961172278 /* log.js in Resources */,
-				FB858F50CE1FF35F9CA1004FA070260B /* main.js in Resources */,
-				029FEC158F711E90669DA381E1A7F468 /* template.js in Resources */,
+				22FAF6CF4CF00DE5E9FACFE28AD8E328 /* HoloWebViewBridge.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,21 +456,38 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FAB5399A027020165A5762238ABC6003 /* Resources */ = {
+		CDBDB90F26C5172DBCF4A0D3BA353644 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7FB94CCAF8F06D21AEAC52CDCF7F3F5B /* HoloWebViewBridge.bundle in Resources */,
+				DD780E766355774DC59DA4A5FD052B7A /* log.js in Resources */,
+				101AB0BB6084E9C9AEA600A1CDE7F293 /* main.js in Resources */,
+				180636278CF5770FA29E003F098DD648 /* template.js in Resources */,
+				1D8E725B13E46BCE9A4EB4AA5AD8345B /* template_callback.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		59F194F3AC431455DC69FB3605DB321F /* Sources */ = {
+		2495D8EC880642D6645F741CAF534576 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E2B58F6EA00259A1440849A5B58CD4C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9899D579CA6C8528FFB794B88AF1F927 /* HoloWebViewBridge-dummy.m in Sources */,
+				EC953675946A53720656ADA580745A15 /* WebViewBridge.swift in Sources */,
+				EC598629B6CD2766B9CF0A16AE58507A /* WebViewLogPlugin.swift in Sources */,
+				83FCC6B4AD2EFB05ABDFA508146E6451 /* WebViewPluginProtocol.swift in Sources */,
+				293414092E89F28DB1B2CCFA0678D596 /* WebViewTemplatePlugin.swift in Sources */,
+				653E43DEE0DFC37B8A8133FFE2AB11FA /* WKWebView+HoloBridge.m in Sources */,
+				824AFE6B761B8C0DBB74C28117A524CC /* WKWebView+HoloBridge.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,39 +507,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DCF8065D644E4C080C0CCAE0BF164331 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				75EBC8E525BEF33A006894F9 /* WebViewTemplatePlugin.swift in Sources */,
-				B834530DA9B1A34FB5B253EB50728E7E /* HoloWebViewBridge-dummy.m in Sources */,
-				A429B2128A0846BC5640E838103A330E /* WebViewBridge.swift in Sources */,
-				F0B531E0B34BB4D66D32C1F9D1621369 /* WebViewLogPlugin.swift in Sources */,
-				26E0481E9B06401952DD3B411AD2F4EE /* WebViewPluginProtocol.swift in Sources */,
-				09C69ED14B7A7779EE48E4BA9F998F85 /* WKWebView+HoloBridge.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		4F436A0E106709292B0DC7925F98A9A5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "HoloWebViewBridge-HoloWebViewBridge";
-			target = D1353FFA6119AA8AAE036ED173FE1297 /* HoloWebViewBridge-HoloWebViewBridge */;
-			targetProxy = 6DEFA49F9EC07B0D0F686C379555FDDF /* PBXContainerItemProxy */;
-		};
-		86C689BDB578B2C53FCE17A32236CAE4 /* PBXTargetDependency */ = {
+		039BC4F5EE0B5FB90C14AF6A6FB88D41 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = HoloWebViewBridge;
 			target = 3E4077949B37DC37E9BBB1482D8F98EE /* HoloWebViewBridge */;
-			targetProxy = 038EC0EEB3E0129DA2098ADAD979DC47 /* PBXContainerItemProxy */;
+			targetProxy = F66CCB13EE94E942AAAEEEE6F0FC2A37 /* PBXContainerItemProxy */;
 		};
-		A915B262D55937DD82127BD7BE95D733 /* PBXTargetDependency */ = {
+		556D59496D12725B8665A0D3A6BD207A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "HoloWebViewBridge-HoloWebViewBridge";
+			target = D1353FFA6119AA8AAE036ED173FE1297 /* HoloWebViewBridge-HoloWebViewBridge */;
+			targetProxy = 60D1D509256EEE638738C1F9DAE45DAF /* PBXContainerItemProxy */;
+		};
+		83E77D5AA831F21540245670B6A388F0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-HoloWebViewBridge_Example";
 			target = 16AA27790E665D7B982A8F70CA18CAE1 /* Pods-HoloWebViewBridge_Example */;
-			targetProxy = FE13CDC9044B5A9ACF44067D3C7A592B /* PBXContainerItemProxy */;
+			targetProxy = 804B36B5388BCB21440019678BD5C310 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -552,9 +564,9 @@
 			};
 			name = Release;
 		};
-		240024F12FC91BCF4BAD378404DCDB07 /* Debug */ = {
+		12083643228FAA5A75CCD208357C2B4E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9F0507DE5B86AB204195805EF9BA5CF2 /* HoloWebViewBridge.debug.xcconfig */;
+			baseConfigurationReference = 0690ACFA21584874C02528ED69EBA580 /* HoloWebViewBridge.release.xcconfig */;
 			buildSettings = {
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/HoloWebViewBridge";
 				IBSC_MODULE = HoloWebViewBridge;
@@ -565,6 +577,36 @@
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		27C32538762DE30A2DD4AB1BF504D80A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EBE4910310E796B020974303F9915166 /* HoloWebViewBridge.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/HoloWebViewBridge/HoloWebViewBridge-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HoloWebViewBridge/HoloWebViewBridge-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/HoloWebViewBridge/HoloWebViewBridge.modulemap";
+				PRODUCT_MODULE_NAME = HoloWebViewBridge;
+				PRODUCT_NAME = HoloWebViewBridge;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
@@ -633,36 +675,21 @@
 			};
 			name = Release;
 		};
-		4BB7907591B74683E25DF3699EB9729C /* Release */ = {
+		7CCC1442DBE492861A9DFF820B19A457 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 59347557ECF30BBC97DFE9DBEAE99046 /* HoloWebViewBridge.release.xcconfig */;
+			baseConfigurationReference = EBE4910310E796B020974303F9915166 /* HoloWebViewBridge.debug.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/HoloWebViewBridge/HoloWebViewBridge-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/HoloWebViewBridge/HoloWebViewBridge-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/HoloWebViewBridge";
+				IBSC_MODULE = HoloWebViewBridge;
+				INFOPLIST_FILE = "Target Support Files/HoloWebViewBridge/ResourceBundle-HoloWebViewBridge-HoloWebViewBridge-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/HoloWebViewBridge/HoloWebViewBridge.modulemap";
-				PRODUCT_MODULE_NAME = HoloWebViewBridge;
 				PRODUCT_NAME = HoloWebViewBridge;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+				WRAPPER_EXTENSION = bundle;
 			};
-			name = Release;
+			name = Debug;
 		};
 		82D81D0E7D25EB207614B253451374C6 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -695,22 +722,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
-		};
-		BBD5315CC5756D08A5F9E63029AA84B4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 59347557ECF30BBC97DFE9DBEAE99046 /* HoloWebViewBridge.release.xcconfig */;
-			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/HoloWebViewBridge";
-				IBSC_MODULE = HoloWebViewBridge;
-				INFOPLIST_FILE = "Target Support Files/HoloWebViewBridge/ResourceBundle-HoloWebViewBridge-HoloWebViewBridge-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				PRODUCT_NAME = HoloWebViewBridge;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
 		};
 		C14E932D4C3EFCC589F7DEABCEC18F22 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -766,15 +777,16 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
 		};
-		EB9150E2602F05D83E4E490A479E9E6C /* Debug */ = {
+		D2E89FFE70D82A55B703BC679E1B290B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9F0507DE5B86AB204195805EF9BA5CF2 /* HoloWebViewBridge.debug.xcconfig */;
+			baseConfigurationReference = 0690ACFA21584874C02528ED69EBA580 /* HoloWebViewBridge.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -797,10 +809,11 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 		EF3BAAA889B17377BE8F3254633FA0A7 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -897,20 +910,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		93CF4D0854F58D46A1ADDCB8F9ED9312 /* Build configuration list for PBXNativeTarget "HoloWebViewBridge-HoloWebViewBridge" */ = {
+		839CE3F73B42973A3AB3A30A26BBCE49 /* Build configuration list for PBXNativeTarget "HoloWebViewBridge-HoloWebViewBridge" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				240024F12FC91BCF4BAD378404DCDB07 /* Debug */,
-				BBD5315CC5756D08A5F9E63029AA84B4 /* Release */,
+				7CCC1442DBE492861A9DFF820B19A457 /* Debug */,
+				12083643228FAA5A75CCD208357C2B4E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E5D19D7E83EB6DA3A2452B954E266981 /* Build configuration list for PBXNativeTarget "HoloWebViewBridge" */ = {
+		F682DF65E4627A8BE95F1F0CC2EA5CC4 /* Build configuration list for PBXNativeTarget "HoloWebViewBridge" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EB9150E2602F05D83E4E490A479E9E6C /* Debug */,
-				4BB7907591B74683E25DF3699EB9729C /* Release */,
+				27C32538762DE30A2DD4AB1BF504D80A /* Debug */,
+				D2E89FFE70D82A55B703BC679E1B290B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
