@@ -63,10 +63,14 @@ class WebViewTemplatePlugin: WebViewPluginProtocol {
     public func didReceiveMessage(_ fun: String, args: [Any]) {
         if fun == self.function {
             if self.isCallback {
-                if let handler = args.last as? ResponseHandler {
-                    var callbackArgs = args
-                    callbackArgs.removeLast()
-                    self.callbackHandler?(callbackArgs, handler)
+                for (index, item) in args.reversed().enumerated() {
+                    if let handler = item as? ResponseHandler {
+                        var callbackArgs = args
+                        // args.count - index - 1: because args.reversed()
+                        callbackArgs.remove(at: args.count - index - 1)
+                        self.callbackHandler?(callbackArgs, handler)
+                        break
+                    }
                 }
             } else {
                 self.handler?(args)
