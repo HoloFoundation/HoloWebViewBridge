@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "WKWebView+HoloBridge.h"
 
 FOUNDATION_EXPORT double HoloWebViewBridgeVersionNumber;
 FOUNDATION_EXPORT const unsigned char HoloWebViewBridgeVersionString[];

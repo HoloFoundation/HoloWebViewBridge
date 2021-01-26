@@ -53,6 +53,9 @@ public class WebViewBridge: NSObject, WKScriptMessageHandler {
         self.webView?.configuration.userContentController.removeScriptMessageHandler(forName: self.messageName)
     }
     
+    deinit {
+        self.invalidate()
+    }
     
     internal weak var webView: WKWebView?
     
