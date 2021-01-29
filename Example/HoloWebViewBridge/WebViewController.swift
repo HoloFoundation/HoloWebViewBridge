@@ -21,6 +21,7 @@ class WebViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        self.title = "demo.html"
         self.view.backgroundColor = UIColor.white
         self.view.addSubview(self.webView)
         
@@ -33,7 +34,7 @@ class WebViewController: UIViewController {
     
     lazy var webView: MyWebView = {
         let _configuration = WKWebViewConfiguration()
-        let _webView = MyWebView(frame: CGRect(x: 0, y: 200, width: UIScreen.main.bounds.width, height: 400), configuration: _configuration)
+        let _webView = MyWebView(frame: CGRect(x: 0, y: 200, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height - 200), configuration: _configuration)
         
         _webView.holo.inject(plugin: WebViewLogPlugin())
         _webView.holo.inject(plugin: WebViewAlertPlugin())
