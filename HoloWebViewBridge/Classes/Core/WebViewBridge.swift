@@ -12,6 +12,7 @@ public class WebViewBridge: NSObject, WKScriptMessageHandler {
     public func inject(plugin: WebViewPluginProtocol) {
         let identifier = plugin.identifier
         if self.plugins[identifier] != nil {
+            self.remove(plugin: identifier)
             debugPrint("[HoloWebViewBridge] You have injected a plugin with the identifier: \(identifier), which will overwrite it.")
         }
         self.plugins[identifier] = plugin
