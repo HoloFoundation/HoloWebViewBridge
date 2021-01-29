@@ -17,11 +17,11 @@
     }
     
     function pluginPrint() {
-        window.bridge.plugin.print({"hello world":"123"})
+        window.bridge.print({"hello world":"123"})
     }
     
     function pluginPrintHandler() {
-        window.bridge.plugin.printHandler("hello world", function(msg) {
+        window.bridge.printHandler("hello world", function(msg) {
             window.bridge.log(msg)
         })
     }
