@@ -8,9 +8,7 @@
 import Foundation
 
 class WebViewTemplatePlugin: WebViewPluginProtocol {
-    
-    private init() {}
-    
+        
     convenience init(function identifier: String, handler: ResponseHandler?) {
         self.init()
         self.isCallback = false
@@ -27,6 +25,7 @@ class WebViewTemplatePlugin: WebViewPluginProtocol {
         self.callbackHandler = callbackHandler
     }
     
+    private init() {}
     
     private var function: String = ""
     private var handler: ResponseHandler?
@@ -34,21 +33,15 @@ class WebViewTemplatePlugin: WebViewPluginProtocol {
     
     private var isCallback = false
     private var callback: ResponseHandler?
-
-    // MARK: - LogPlugin method
-    
-    func log(_ msg: Any) {
-        print(msg)
-    }
     
     
     // MARK: - WebViewPluginProtocol
     
-    public var identifier: String {
+    var identifier: String {
         return "holo.webView.bridge.plugin." + self.function
     }
     
-    public var javascript: String {
+    var javascript: String {
         if let path = Bundle(for: WebViewTemplatePlugin.self).resourcePath?.appending("/HoloWebViewBridge.bundle"),
            let bundle = Bundle(path: path),
            let jsPath = bundle.path(forResource: self.isCallback ? "template_callback" : "template", ofType: "js"),
@@ -60,7 +53,7 @@ class WebViewTemplatePlugin: WebViewPluginProtocol {
         return ""
     }
     
-    public func didReceiveMessage(_ fun: String, args: [Any]) {
+    func didReceiveMessage(_ fun: String, args: [Any]) {
         if fun == self.function {
             if self.isCallback {
                 for (index, item) in args.reversed().enumerated() {

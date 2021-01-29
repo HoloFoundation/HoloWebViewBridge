@@ -14,9 +14,7 @@ class WebViewAlertPlugin: WebViewPluginProtocol {
     deinit {
         print("WebViewAlertPlugin deinit")
     }
-    
-    public init() {}
-    
+        
     // MARK: - AlertPlugin method
     
     var responseHandler: ResponseHandler?

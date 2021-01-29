@@ -107,7 +107,7 @@ public class WebViewBridge: NSObject, WKScriptMessageHandler {
                             if JSONSerialization.isValidJSONObject(params) == true,
                                let data = try? JSONSerialization.data(withJSONObject: params, options: []),
                                let json = String(data: data, encoding: .utf8) {
-                                let js = String(format: "window.bridge.closureDispatcher.invoke(%zd, %@)", val, json)
+                                let js = String(format: "window.bridge.js_funSend.invoke(%zd, %@)", val, json)
                                 self.webView?.evaluateJavaScript(js, completionHandler: nil)
                             }
                         }

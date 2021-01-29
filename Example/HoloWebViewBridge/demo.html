@@ -3,30 +3,30 @@
         <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1">
                 <title>hello world</title>
-    </header>
+                </header>
     <script type="text/javascript">
         
         function tapped() {
             window.bridge.log("hello world")
         }
     
-        function alert() {
-            window.bridge.alert("hello world", function(msg) {
-                window.bridge.log(msg)
-            })
-        }
+    function alert() {
+        window.bridge.alert("hello world", function(msg) {
+            window.bridge.log(msg)
+        })
+    }
     
-        function pluginPrint() {
-            window.bridge.plugin.print({"hello world":"123"})
-        }
+    function pluginPrint() {
+        window.bridge.plugin.print({"hello world":"123"})
+    }
     
-        function pluginPrintCallback() {
-            window.bridge.plugin.printCallback("hello world", function(msg) {
-                window.bridge.log(msg)
-            })
-        }
+    function pluginPrintHandler() {
+        window.bridge.plugin.printHandler("hello world", function(msg) {
+            window.bridge.log(msg)
+        })
+    }
     
-    </script>
+        </script>
     <a href="javascript:tapped();">Native Log</a>
     <br/>
     
@@ -42,7 +42,7 @@
     
     <br/>
     </script>
-    <a href="javascript:pluginPrintCallback();">Native Plugin Handler Callback</a>
+    <a href="javascript:pluginPrintHandler();">Native Plugin Handler Callback</a>
     <br/>
     
 </html>
