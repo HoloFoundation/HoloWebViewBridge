@@ -42,13 +42,26 @@ class WebViewTemplatePlugin: WebViewPluginProtocol {
     }
     
     var javascript: String {
+        var define = "// define js function\n\n"
+        var fun = ""
+        let arr = self.function.split(separator: ".")
+        arr.forEach { (item) in
+            fun.append(String(item))
+            if item != arr.first && item != arr.last {
+                define = define.appending("if (!\(fun)) { \(fun) = {} }\n\n")
+            }
+            if item != arr.last {
+                fun.append(".")
+            }
+        }
+        
         if let path = Bundle(for: WebViewTemplatePlugin.self).resourcePath?.appending("/HoloWebViewBridge.bundle"),
            let bundle = Bundle(path: path),
            let jsPath = bundle.path(forResource: self.isCallback ? "template_callback" : "template", ofType: "js"),
            var js = try? String(contentsOfFile: jsPath, encoding: .utf8) {
             js = js.replacingOccurrences(of: "{function_name}", with: self.function)
             js = js.replacingOccurrences(of: "{plugin_identifier}", with: self.identifier)
-            return js
+            return define + js
         }
         return ""
     }

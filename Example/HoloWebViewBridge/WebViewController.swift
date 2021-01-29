@@ -39,15 +39,13 @@ class WebViewController: UIViewController {
         _webView.holo.inject(plugin: WebViewLogPlugin())
         _webView.holo.inject(plugin: WebViewAlertPlugin())
         
-        _webView.holo.inject(function: "print") { (args) in
+        _webView.holo.inject(function: "window.bridge.plugin.print") { (args) in
             print(args)
         }
-        
-        _webView.holo.inject(function: "printHandler") { (args, handler) in
+        _webView.holo.inject(function: "window.bridge.plugin.printHandler") { (args, handler) in
             print(args)
             handler?(["1", "2"])
         }
-        
         
         return _webView
     }()
@@ -60,4 +58,5 @@ class MyWebView: WKWebView {
     deinit {
         print("MyWebView deinit")
     }
+    
 }

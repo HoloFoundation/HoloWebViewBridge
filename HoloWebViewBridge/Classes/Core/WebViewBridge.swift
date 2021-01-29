@@ -24,11 +24,19 @@ public class WebViewBridge: NSObject, WKScriptMessageHandler {
     }
     
     public func inject(function identifier: String, handler: ResponseHandler?) {
+        if !identifier.hasPrefix("window.") {
+            debugPrint("[HoloWebViewBridge] The function identifier must begin with 'window.'.")
+            return
+        }
         let plugin = WebViewTemplatePlugin(function: identifier, handler: handler)
         self.inject(plugin: plugin)
     }
     
     public func inject(function identifier: String, callbackHandler: ResponseCallbackHandler?) {
+        if !identifier.hasPrefix("window.") {
+            debugPrint("[HoloWebViewBridge] The function identifier must begin with 'window.'.")
+            return
+        }
         let plugin = WebViewTemplatePlugin(function: identifier, callbackHandler: callbackHandler)
         self.inject(plugin: plugin)
     }
