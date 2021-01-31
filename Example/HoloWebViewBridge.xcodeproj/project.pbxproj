@@ -14,6 +14,8 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		75038F9D25C714C300DDEF3C /* WebViewLogPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75038F9C25C714C300DDEF3C /* WebViewLogPlugin.swift */; };
+		75038FA125C714CE00DDEF3C /* log.js in Resources */ = {isa = PBXBuildFile; fileRef = 75038FA025C714CE00DDEF3C /* log.js */; };
 		75077FA825BCA53900E7E62C /* demo.html in Resources */ = {isa = PBXBuildFile; fileRef = 75077FA725BCA53900E7E62C /* demo.html */; };
 		75077FAF25BD8CE000E7E62C /* WebViewAlertPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75077FAE25BD8CE000E7E62C /* WebViewAlertPlugin.swift */; };
 		75077FB325BD8D7500E7E62C /* alert.js in Resources */ = {isa = PBXBuildFile; fileRef = 75077FB225BD8D7500E7E62C /* alert.js */; };
@@ -45,6 +47,8 @@
 		607FACE51AFB9204008FA782 /* HoloWebViewBridge_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HoloWebViewBridge_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		75038F9C25C714C300DDEF3C /* WebViewLogPlugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewLogPlugin.swift; sourceTree = "<group>"; };
+		75038FA025C714CE00DDEF3C /* log.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = log.js; sourceTree = "<group>"; };
 		75077FA725BCA53900E7E62C /* demo.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = demo.html; sourceTree = "<group>"; };
 		75077FAE25BD8CE000E7E62C /* WebViewAlertPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewAlertPlugin.swift; sourceTree = "<group>"; };
 		75077FB225BD8D7500E7E62C /* alert.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = alert.js; sourceTree = "<group>"; };
@@ -112,7 +116,7 @@
 		607FACD21AFB9204008FA782 /* Example for HoloWebViewBridge */ = {
 			isa = PBXGroup;
 			children = (
-				75077FB625BD8D9200E7E62C /* AlertPlugin */,
+				75077FB625BD8D9200E7E62C /* ExamplePlugins */,
 				75077FA725BCA53900E7E62C /* demo.html */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
@@ -161,13 +165,15 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
-		75077FB625BD8D9200E7E62C /* AlertPlugin */ = {
+		75077FB625BD8D9200E7E62C /* ExamplePlugins */ = {
 			isa = PBXGroup;
 			children = (
+				75038F9C25C714C300DDEF3C /* WebViewLogPlugin.swift */,
+				75038FA025C714CE00DDEF3C /* log.js */,
 				75077FAE25BD8CE000E7E62C /* WebViewAlertPlugin.swift */,
 				75077FB225BD8D7500E7E62C /* alert.js */,
 			);
-			name = AlertPlugin;
+			name = ExamplePlugins;
 			sourceTree = "<group>";
 		};
 		D12FAD91FB499BA235428728 /* Frameworks */ = {
@@ -268,6 +274,7 @@
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				75077FB325BD8D7500E7E62C /* alert.js in Resources */,
 				75077FA825BCA53900E7E62C /* demo.html in Resources */,
+				75038FA125C714CE00DDEF3C /* log.js in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
@@ -353,6 +360,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				75038F9D25C714C300DDEF3C /* WebViewLogPlugin.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				75077FAF25BD8CE000E7E62C /* WebViewAlertPlugin.swift in Sources */,
 				75077FC725BDD44E00E7E62C /* WebViewController.swift in Sources */,

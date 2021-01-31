@@ -6,8 +6,9 @@
 //
 
 import Foundation
+import HoloWebViewBridge
 
-public class WebViewLogPlugin: WebViewPluginProtocol {
+class WebViewLogPlugin: WebViewPluginProtocol {
     
     public init() {}
     
@@ -20,21 +21,19 @@ public class WebViewLogPlugin: WebViewPluginProtocol {
     
     // MARK: - WebViewPluginProtocol
     
-    public var identifier: String {
+    var identifier: String {
         return "holo.webView.bridge.log"
     }
     
-    public var javascript: String {
-        if let path = Bundle(for: WebViewLogPlugin.self).resourcePath?.appending("/HoloWebViewBridge.bundle"),
-           let bundle = Bundle(path: path),
-           let jsPath = bundle.path(forResource: "log", ofType: "js"),
-           let js = try? String(contentsOfFile: jsPath, encoding: .utf8) {
+    var javascript: String {
+        if let path = Bundle(for: ViewController.self).path(forResource: "log", ofType: "js"),
+           let js = try? String(contentsOfFile: path, encoding: .utf8) {
             return js
         }
         return ""
     }
     
-    public func didReceiveMessage(_ fun: String, args: [Any]) {
+    func didReceiveMessage(_ fun: String, args: [Any]) {
         if fun == "log()", let msg = args.first {
             self.log(msg)
         }
