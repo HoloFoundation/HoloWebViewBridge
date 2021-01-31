@@ -25,6 +25,8 @@ class WebViewTemplatePlugin: WebViewPluginProtocol {
         self.callbackHandler = callbackHandler
     }
     
+    static let pluginPrefix = "holo.webView.bridge.plugin."
+    
     private init() {}
     
     private var function: String = ""
@@ -38,7 +40,7 @@ class WebViewTemplatePlugin: WebViewPluginProtocol {
     // MARK: - WebViewPluginProtocol
     
     var identifier: String {
-        return "holo.webView.bridge.plugin." + self.function
+        return WebViewTemplatePlugin.pluginPrefix + self.function
     }
     
     var javascript: String {

@@ -56,14 +56,19 @@ public class WebViewBridge: NSObject, WKScriptMessageHandler {
         }
     }
     
-    public func removeAllPlugins() {
+    public func remove(function identifier: String) {
+        let key = WebViewTemplatePlugin.pluginPrefix + identifier
+        self.remove(plugin: key)
+    }
+    
+    public func removeAll() {
         self.plugins.removeAll()
         self.webView?.configuration.userContentController.removeAllUserScripts()
         self.injectMainJavascript()
     }
     
     public func invalidate() {
-        self.removeAllPlugins()
+        self.removeAll()
         self.webView?.configuration.userContentController.removeScriptMessageHandler(forName: self.messageName)
     }
     
