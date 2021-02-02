@@ -10,7 +10,9 @@ import HoloWebViewBridge
 
 class WebViewLogPlugin: WebViewPluginProtocol {
     
-    public init() {}
+    deinit {
+        print("WebViewLogPlugin deinit")
+    }
     
     // MARK: - LogPlugin method
     
