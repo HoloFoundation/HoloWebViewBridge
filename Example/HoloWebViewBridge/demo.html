@@ -6,33 +6,42 @@
                 </header>
     <script type="text/javascript">
         
-        function tapped() {
+        function log() {
             window.bridge.log("hello world")
         }
     
     function alert() {
-        window.bridge.alertConfirm("hello world", function(msg) {
-            window.bridge.log(msg)
+        window.bridge.alert("hello world")
+    }
+    
+    function alertConfirm() {
+        window.bridge.alertConfirm("hello world", function(args) {
+            window.bridge.log(args[0])
         })
     }
     
     function pluginPrint() {
-        window.bridge.print({"hello world":"123"})
+        window.bridge.print({"hello":"world"})
     }
     
     function pluginPrintHandler() {
-        window.bridge.printHandler("hello world", function(msg) {
-            window.bridge.log(msg)
+        window.bridge.printHandler("hello world", function(args) {
+            window.bridge.log(args[0])
         })
     }
     
         </script>
-    <a href="javascript:tapped()">Native Log</a>
+    <a href="javascript:log()">Native Log</a>
     <br/>
     
     <br/>
     </script>
     <a href="javascript:alert()">Native Alert</a>
+    <br/>
+    
+    <br/>
+    </script>
+    <a href="javascript:alertConfirm()">Native AlertConfirm</a>
     <br/>
     
     <br/>

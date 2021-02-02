@@ -40,11 +40,11 @@ class WebViewController: UIViewController {
         _webView.holo.inject(plugin: WebViewAlertPlugin())
         
         _webView.holo.inject(function: "window.bridge.print") { (args) in
-            print(args)
+            print(args.first ?? "")
         }
         _webView.holo.inject(function: "window.bridge.printHandler") { (args, handler) in
-            print(args)
-            handler?(["1", "2"])
+            print(args.first ?? "")
+            handler?(["confirm"])
         }
         
         return _webView
