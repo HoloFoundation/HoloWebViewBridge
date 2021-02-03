@@ -11,11 +11,16 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Usage
 
-### Type 1: Inject plugin
+### Type 1: 
 
-#### 1.1 Define plugin by WebViewPluginProtocol
+1, Inject plugin
+```swift
+let webView = WKWebView()
+webView.holo.inject(plugin: WebViewLogPlugin())
+```
 
-```Swift
+2, Define plugin by `WebViewPluginProtocol`
+```swift
 class WebViewLogPlugin: WebViewPluginProtocol {
 
     func log(_ msg: Any) {
@@ -43,41 +48,33 @@ class WebViewLogPlugin: WebViewPluginProtocol {
 }
 ```
 
-define log function in log.js
-```JavaScript
+3, Define log function in log.js
+```javascript
 window.bridge.log = function(msg) {
     window.bridge.js_msgSend("holo.webView.bridge.log", "log()", msg)
 }
 ```
 
-#### 1.2 Inject plugin
-
-```Swift
-let webView = WKWebView()
-webView.holo.inject(plugin: WebViewLogPlugin())
-```
-
-#### 1.3 Call method in JS
-
-```JavaScript
+4, Call method in JS
+```javascript
 window.bridge.log("hello world")
 ```
 
 
-### Type 2: Inject function directly
+### Type 2: 
 
-#### 2.1 Inject function
-```Swift
+1, Inject function
+```swift
 let webView = WKWebView()
-_webView.holo.inject(function: "window.bridge.print") { (args) in
+webView.holo.inject(function: "window.bridge.print") { (args) in
     if let msg = args.first {
         print(msg)
     }
 }
 ```
 
-#### 2.2 Call method in JS
-```JavaScript
+2, Call method in JS
+```javascript
 window.bridge.log("hello world")
 ```
 
