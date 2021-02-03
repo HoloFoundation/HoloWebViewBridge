@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'HoloWebViewBridge'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of HoloWebViewBridge.'
+  s.summary          = 'A bridge for sending messages between Swift and JavaScript in WKWebView.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?

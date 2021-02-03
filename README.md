@@ -11,7 +11,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Usage
 
-### Type 1: 
+### Type 1
 
 1, Inject plugin
 ```swift
@@ -61,7 +61,7 @@ window.bridge.log("hello world")
 ```
 
 
-### Type 2: 
+### Type 2
 
 1, Inject function
 ```swift
