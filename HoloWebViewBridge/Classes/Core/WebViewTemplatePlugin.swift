@@ -8,12 +8,12 @@
 import Foundation
 
 class WebViewTemplatePlugin: WebViewPluginProtocol {
-        
+    
     convenience init(function identifier: String, handler: ResponseHandler?) {
         self.init()
         self.isCallback = false
         
-        self.function = identifier
+        self.functionId = identifier
         self.handler = handler
     }
     
@@ -21,15 +21,17 @@ class WebViewTemplatePlugin: WebViewPluginProtocol {
         self.init()
         self.isCallback = true
         
-        self.function = identifier
+        self.functionId = identifier
         self.callbackHandler = callbackHandler
     }
     
-    static let pluginPrefix = "holo.webView.bridge.plugin."
+    static func identifier(_ functionId: String) -> String {
+        return "holo.webView.bridge.plugin." + functionId
+    }
     
     private init() {}
     
-    private var function: String = ""
+    private var functionId = ""
     private var handler: ResponseHandler?
     private var callbackHandler: ResponseCallbackHandler?
     
@@ -40,13 +42,13 @@ class WebViewTemplatePlugin: WebViewPluginProtocol {
     // MARK: - WebViewPluginProtocol
     
     var identifier: String {
-        return WebViewTemplatePlugin.pluginPrefix + self.function
+        return WebViewTemplatePlugin.identifier(self.functionId)
     }
     
     var javascript: String {
         var define = "// define js function\n\n"
         var fun = ""
-        let arr = self.function.split(separator: ".")
+        let arr = self.functionId.split(separator: ".")
         arr.forEach { (item) in
             fun.append(String(item))
             if item != arr.first && item != arr.last {
@@ -61,7 +63,7 @@ class WebViewTemplatePlugin: WebViewPluginProtocol {
            let bundle = Bundle(path: path),
            let jsPath = bundle.path(forResource: self.isCallback ? "template_callback" : "template", ofType: "js"),
            var js = try? String(contentsOfFile: jsPath, encoding: .utf8) {
-            js = js.replacingOccurrences(of: "{function_name}", with: self.function)
+            js = js.replacingOccurrences(of: "{function_name}", with: self.functionId)
             js = js.replacingOccurrences(of: "{plugin_identifier}", with: self.identifier)
             return define + js
         }
@@ -69,7 +71,7 @@ class WebViewTemplatePlugin: WebViewPluginProtocol {
     }
     
     func didReceiveMessage(_ fun: String, args: [Any]) {
-        if fun == self.function {
+        if fun == self.functionId {
             if self.isCallback {
                 for (index, item) in args.reversed().enumerated() {
                     if let handler = item as? ResponseHandler {

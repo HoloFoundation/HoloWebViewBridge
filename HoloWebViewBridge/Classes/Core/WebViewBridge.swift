@@ -57,7 +57,7 @@ public class WebViewBridge: NSObject, WKScriptMessageHandler {
     }
     
     public func remove(function identifier: String) {
-        let key = WebViewTemplatePlugin.pluginPrefix + identifier
+        let key = WebViewTemplatePlugin.identifier(identifier)
         self.remove(plugin: key)
     }
     
