@@ -70,18 +70,26 @@ class WebViewTemplatePlugin: WebViewPluginProtocol {
         return ""
     }
     
-    func didReceiveMessage(_ fun: String, args: [Any]) {
+    func didReceiveMessage(_ fun: String, args: Any?) {
         if fun == self.functionId {
-            if self.isCallback {
+            if self.isCallback, let args = args as? [Any] {
                 for (index, item) in args.reversed().enumerated() {
                     if let handler = item as? ResponseHandler {
                         var callbackArgs = args
                         // args.count - index - 1: because args.reversed()
                         callbackArgs.remove(at: args.count - index - 1)
-                        self.callbackHandler?(callbackArgs, handler)
+                        let params: Any?
+                        if callbackArgs.count <= 0 {
+                            params = nil
+                        } else if callbackArgs.count == 1 {
+                            params = callbackArgs.first
+                        } else {
+                            params = callbackArgs
+                        }
+                        self.callbackHandler?(params, handler)
                         break
                     }
-                }
+                }                
             } else {
                 self.handler?(args)
             }

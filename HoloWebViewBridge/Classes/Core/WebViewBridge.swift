@@ -9,6 +9,7 @@ import WebKit
 
 public class WebViewBridge: NSObject, WKScriptMessageHandler {
     
+    /// inject a plugin
     public func inject(plugin: WebViewPluginProtocol) {
         let identifier = plugin.identifier
         if self.plugins[identifier] != nil {
@@ -23,6 +24,7 @@ public class WebViewBridge: NSObject, WKScriptMessageHandler {
         }
     }
     
+    /// inject a function with a handler
     public func inject(function identifier: String, handler: ResponseHandler?) {
         if !identifier.hasPrefix("window.") {
             debugPrint("[HoloWebViewBridge] The function identifier must begin with 'window.'.")
@@ -32,6 +34,7 @@ public class WebViewBridge: NSObject, WKScriptMessageHandler {
         self.inject(plugin: plugin)
     }
     
+    /// inject a function with a callbackHandler
     public func inject(function identifier: String, callbackHandler: ResponseCallbackHandler?) {
         if !identifier.hasPrefix("window.") {
             debugPrint("[HoloWebViewBridge] The function identifier must begin with 'window.'.")
@@ -41,7 +44,7 @@ public class WebViewBridge: NSObject, WKScriptMessageHandler {
         self.inject(plugin: plugin)
     }
     
-    
+    /// remove a plugin with an identifier
     public func remove(plugin identifier: String) {
         if self.plugins[identifier] == nil {
             debugPrint("[HoloWebViewBridge] No found a plugin with the identifier: \(identifier).")
@@ -56,17 +59,20 @@ public class WebViewBridge: NSObject, WKScriptMessageHandler {
         }
     }
     
+    /// remove a function with an identifier
     public func remove(function identifier: String) {
         let key = WebViewTemplatePlugin.identifier(identifier)
         self.remove(plugin: key)
     }
     
+    /// remove all plugins and functions
     public func removeAll() {
         self.plugins.removeAll()
         self.webView?.configuration.userContentController.removeAllUserScripts()
         self.injectMainJavascript()
     }
     
+    /// invalidate() will be called automatically when a WKWebView is deinited
     public func invalidate() {
         self.removeAll()
         self.webView?.configuration.userContentController.removeScriptMessageHandler(forName: self.messageName)
@@ -118,19 +124,34 @@ public class WebViewBridge: NSObject, WKScriptMessageHandler {
                     } else if flags == 1, let val = val as? Int {
                         let handler: ResponseHandler = { [weak self] params in
                             guard let self = self else { return }
-                            if JSONSerialization.isValidJSONObject(params) == true,
-                               let data = try? JSONSerialization.data(withJSONObject: params, options: []),
-                               let json = String(data: data, encoding: .utf8) {
-                                let js = String(format: "window.bridge.js_funSend.invoke(%zd, %@)", val, json)
-                                self.webView?.evaluateJavaScript(js, completionHandler: nil)
+                            var args = ""
+                            if let params = params {
+                                let paramsArray = [params]
+                                if JSONSerialization.isValidJSONObject(paramsArray) == true,
+                                   let data = try? JSONSerialization.data(withJSONObject: paramsArray, options: []),
+                                   let json = String(data: data, encoding: .utf8) {
+                                    args = json
+                                    args = String(args.dropFirst())
+                                    args = String(args.dropLast())
+                                }
                             }
+                            let js = String(format: "window.bridge.js_funSend.invoke(%zd, %@)", val, args)
+                            self.webView?.evaluateJavaScript(js, completionHandler: nil)
                         }
                         return handler
                     }
                 }
                 return ""
             }
-            plugin.didReceiveMessage(selector, args: args)
+            let params: Any?
+            if args.count <= 0 {
+                params = nil
+            } else if args.count == 1 {
+                params = args.first
+            } else {
+                params = args
+            }
+            plugin.didReceiveMessage(selector, args: params)
         }
     }
     

@@ -35,9 +35,9 @@ class WebViewLogPlugin: WebViewPluginProtocol {
         return ""
     }
     
-    func didReceiveMessage(_ fun: String, args: [Any]) {
-        if fun == "log()", let msg = args.first {
-            self.log(msg)
+    func didReceiveMessage(_ fun: String, args: Any?) {
+        if fun == "log()" {
+            self.log(args ?? "")
         }
     }
     

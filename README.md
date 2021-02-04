@@ -40,9 +40,9 @@ class WebViewLogPlugin: WebViewPluginProtocol {
         return ""
     }
     
-    func didReceiveMessage(_ fun: String, args: [Any]) {
-        if fun == "log()", let msg = args.first {
-            self.log(msg)
+    func didReceiveMessage(_ fun: String, args: Any?) {
+        if fun == "log()" {
+            self.log(msg ?? "")
         }
     }
 }
@@ -67,9 +67,7 @@ window.bridge.log("hello world")
 ```swift
 let webView = WKWebView()
 webView.holo.inject(function: "window.bridge.print") { (args) in
-    if let msg = args.first {
-        print(msg)
-    }
+    print(args ?? "")
 }
 ```
 

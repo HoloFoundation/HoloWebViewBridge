@@ -8,9 +8,40 @@
 import Foundation
 import WebKit
 
-public typealias ResponseHandler = ((_ args: [Any]) -> Void)
+/// If there are no arguments, `args` is nil;
+/// If there is only one argument, then `args` is the argument;
+/// If there are multiple arguments, they are wrapped in an array and passed to `args`.
+///     
+///     let args: Any?
+///     if arguments.count <= 0
+///         args = nil
+///     } else if arguments.count == 1 {
+///         args = arguments.first
+///     } else {
+///         args = arguments
+///     }
+public typealias ResponseHandler = ((_ args: Any?) -> Void)
 
-public typealias ResponseCallbackHandler = ((_ args: [Any], _ callback: ResponseHandler?) -> Void)
+/// If the arguments contains a function, then pass the function to the `handler`, then remove the function from the arguments.
+/// The remaining parameters are determined again:
+/// If there are no arguments, `args` is nil;
+/// If there is only one argument, then `args` is the argument;
+/// If there are multiple arguments, they are wrapped in an array and passed to `args`.
+///
+///     if arguments.contains(handler) {
+///         handler = arguments.handler
+///         arguments.remove(handler)
+///     }
+///     let args: Any?
+///     if arguments.count <= 0
+///         args = nil
+///     } else if arguments.count == 1 {
+///         args = arguments.first
+///     } else {
+///         args = arguments
+///     }
+public typealias ResponseCallbackHandler = ((_ args: Any?, _ handler: ResponseHandler?) -> Void)
+
 
 public protocol WebViewPluginProtocol {
     
@@ -35,9 +66,13 @@ public protocol WebViewPluginProtocol {
     ///   - fun: Identifies the method executed by JavaScript
     ///   - args: Parameter passed to the method executed by JavaScript
     ///
-    /// Example:
+    /// Example 1:
     /// JS:         window.bridge.log("hello")
-    /// Native:     didReceiveMessage("log()", args: ["hello"])
-    func didReceiveMessage(_ fun: String, args: [Any])
+    /// Native:     didReceiveMessage("log()", args: "hello")
+    ///
+    /// Example 2:
+    /// JS:         window.bridge.log("hello", "word")
+    /// Native:     didReceiveMessage("log()", args: ["hello", "word"])
+    func didReceiveMessage(_ fun: String, args: Any?)
     
 }

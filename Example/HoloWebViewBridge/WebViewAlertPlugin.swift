@@ -27,7 +27,7 @@ class WebViewAlertPlugin: WebViewPluginProtocol {
     func alertConfirm(_ msg: String, responseHandler: ResponseHandler?) {
         let alertVC = UIAlertController(title: msg, message: nil, preferredStyle: .alert)
         let action = UIAlertAction(title: "Confirm", style: .cancel) { (action) in
-            responseHandler?(["confirm"])
+            responseHandler?("confirm")
         }
         alertVC.addAction(action)
         UIApplication.shared.keyWindow?.rootViewController?.present(alertVC, animated: true, completion: nil)
@@ -48,16 +48,16 @@ class WebViewAlertPlugin: WebViewPluginProtocol {
         return ""
     }
     
-    func didReceiveMessage(_ fun: String, args: [Any]) {
+    func didReceiveMessage(_ fun: String, args: Any?) {
         if fun == "alert()" {
-            if let msg = args.first as? String {
+            if let msg = args as? String {
                 self.alert(msg)
             }
             return
         }
         
         if fun == "alert(confirm)" {
-            if let msg = args.first as? String, let handler = args.last as? ResponseHandler {
+            if let args = args as? [Any], let msg = args.first as? String, let handler = args.last as? ResponseHandler {
                 self.alertConfirm(msg, responseHandler: handler)
             }
             return
