@@ -143,15 +143,7 @@ public class WebViewBridge: NSObject, WKScriptMessageHandler {
                 }
                 return ""
             }
-            let params: Any?
-            if args.count <= 0 {
-                params = nil
-            } else if args.count == 1 {
-                params = args.first
-            } else {
-                params = args
-            }
-            plugin.didReceiveMessage(selector, args: params)
+            plugin.didReceiveMessage(selector, args: args.count > 1 ? args : args.first)
         }
     }
     

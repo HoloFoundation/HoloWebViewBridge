@@ -12,14 +12,7 @@ import WebKit
 /// If there is only one argument, then `args` is the argument;
 /// If there are multiple arguments, they are wrapped in an array and passed to `args`.
 ///     
-///     let args: Any?
-///     if arguments.count <= 0
-///         args = nil
-///     } else if arguments.count == 1 {
-///         args = arguments.first
-///     } else {
-///         args = arguments
-///     }
+///     args = arguments.count > 1 ? arguments : arguments.first
 public typealias ResponseHandler = ((_ args: Any?) -> Void)
 
 /// If the arguments contains a function, then pass the function to the `handler`, then remove the function from the arguments.
@@ -28,18 +21,11 @@ public typealias ResponseHandler = ((_ args: Any?) -> Void)
 /// If there is only one argument, then `args` is the argument;
 /// If there are multiple arguments, they are wrapped in an array and passed to `args`.
 ///
-///     if arguments.contains(handler) {
-///         handler = arguments.handler
-///         arguments.remove(handler)
+///     if arguments.contains(closure) {
+///         handler = closure
+///         arguments.remove(closure)
 ///     }
-///     let args: Any?
-///     if arguments.count <= 0
-///         args = nil
-///     } else if arguments.count == 1 {
-///         args = arguments.first
-///     } else {
-///         args = arguments
-///     }
+///     args = arguments.count > 1 ? arguments : arguments.first
 public typealias ResponseCallbackHandler = ((_ args: Any?, _ handler: ResponseHandler?) -> Void)
 
 
