@@ -41,7 +41,7 @@ class WebViewAlertPlugin: WebViewPluginProtocol {
     }
     
     public var javascript: String {
-        if let path = Bundle(for: ViewController.self).path(forResource: "alert", ofType: "js"),
+        if let path = Bundle(for: WebViewAlertPlugin.self).path(forResource: "alert", ofType: "js"),
            let js = try? String(contentsOfFile: path, encoding: .utf8) {
             return js
         }

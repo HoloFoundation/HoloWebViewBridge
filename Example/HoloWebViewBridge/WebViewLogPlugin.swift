@@ -28,7 +28,7 @@ class WebViewLogPlugin: WebViewPluginProtocol {
     }
     
     var javascript: String {
-        if let path = Bundle(for: ViewController.self).path(forResource: "log", ofType: "js"),
+        if let path = Bundle(for: WebViewLogPlugin.self).path(forResource: "log", ofType: "js"),
            let js = try? String(contentsOfFile: path, encoding: .utf8) {
             return js
         }

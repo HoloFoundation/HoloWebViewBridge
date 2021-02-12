@@ -33,7 +33,7 @@ class WebViewLogPlugin: WebViewPluginProtocol {
     }
     
     var javascript: String {
-        if let path = Bundle(for: ViewController.self).path(forResource: "log", ofType: "js"),
+        if let path = Bundle(for: WebViewLogPlugin.self).path(forResource: "log", ofType: "js"),
            let js = try? String(contentsOfFile: path, encoding: .utf8) {
             return js
         }
@@ -48,14 +48,14 @@ class WebViewLogPlugin: WebViewPluginProtocol {
 }
 ```
 
-3, Define log function in log.js
+3, Define log function in `log.js`
 ```javascript
 window.bridge.log = function(msg) {
     window.bridge.js_msgSend("holo.webView.bridge.log", "log()", msg)
 }
 ```
 
-4, Call method in JS
+4, Call function in JS
 ```javascript
 window.bridge.log("hello world")
 ```
@@ -66,12 +66,12 @@ window.bridge.log("hello world")
 1, Inject function
 ```swift
 let webView = WKWebView()
-webView.holo.inject(function: "window.bridge.print") { (args) in
+webView.holo.inject(function: "window.bridge.log") { (args) in
     print(args ?? "")
 }
 ```
 
-2, Call method in JS
+2, Call function in JS
 ```javascript
 window.bridge.log("hello world")
 ```
