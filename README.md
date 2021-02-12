@@ -13,6 +13,21 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ### Type 1
 
+1, Inject function
+```swift
+let webView = WKWebView()
+webView.holo.inject(function: "window.bridge.log") { (args) in
+    print(args ?? "")
+}
+```
+
+2, Call function in JS
+```javascript
+window.bridge.log("hello world")
+```
+
+### Type 2
+
 1, Inject plugin
 ```swift
 let webView = WKWebView()
@@ -56,22 +71,6 @@ window.bridge.log = function(msg) {
 ```
 
 4, Call function in JS
-```javascript
-window.bridge.log("hello world")
-```
-
-
-### Type 2
-
-1, Inject function
-```swift
-let webView = WKWebView()
-webView.holo.inject(function: "window.bridge.log") { (args) in
-    print(args ?? "")
-}
-```
-
-2, Call function in JS
 ```javascript
 window.bridge.log("hello world")
 ```
