@@ -1,6 +1,6 @@
 # HoloWebViewBridge
 
-[![CI Status](https://img.shields.io/travis/gonghonglou/HoloWebViewBridge.svg?style=flat)](https://travis-ci.org/gonghonglou/HoloWebViewBridge)
+[![CI Status](https://img.shields.io/travis/HoloFoundation/HoloWebViewBridge.svg?style=flat)](https://travis-ci.org/HoloFoundation/HoloWebViewBridge)
 [![Version](https://img.shields.io/cocoapods/v/HoloWebViewBridge.svg?style=flat)](https://cocoapods.org/pods/HoloWebViewBridge)
 [![License](https://img.shields.io/cocoapods/l/HoloWebViewBridge.svg?style=flat)](https://cocoapods.org/pods/HoloWebViewBridge)
 [![Platform](https://img.shields.io/cocoapods/p/HoloWebViewBridge.svg?style=flat)](https://cocoapods.org/pods/HoloWebViewBridge)
