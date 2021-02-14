@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+  HoloWebViewBridge is an extension of WKWebView. It injects special script into any pages once you call holo functions of WKWebView.
                        DESC
 
   s.homepage         = 'https://github.com/HoloFoundation/HoloWebViewBridge'
