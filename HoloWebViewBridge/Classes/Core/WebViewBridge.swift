@@ -20,7 +20,7 @@ public class WebViewBridge: NSObject, WKScriptMessageHandler {
         
         let javascript = plugin.javascript
         if javascript.count > 0 {
-            self.inject(source: javascript, injectionTime: .atDocumentEnd)
+            self.inject(source: javascript)
         }
     }
     
@@ -55,7 +55,7 @@ public class WebViewBridge: NSObject, WKScriptMessageHandler {
         self.injectMainJavascript()
         
         self.plugins.values.forEach { (plugin) in
-            self.inject(source: plugin.javascript, injectionTime: .atDocumentEnd)
+            self.inject(source: plugin.javascript)
         }
     }
     
@@ -102,12 +102,12 @@ public class WebViewBridge: NSObject, WKScriptMessageHandler {
            let bundle = Bundle(path: path),
            let jsPath = bundle.path(forResource: "main", ofType: "js"),
            let mainJS = try? String(contentsOfFile: jsPath, encoding: .utf8) {
-            self.inject(source: mainJS, injectionTime: .atDocumentStart)
+            self.inject(source: mainJS)
         }
     }
     
-    private func inject(source: String, injectionTime: WKUserScriptInjectionTime) {
-        let userScript = WKUserScript(source: source, injectionTime: injectionTime, forMainFrameOnly: false)
+    private func inject(source: String) {
+        let userScript = WKUserScript(source: source, injectionTime: .atDocumentStart, forMainFrameOnly: false)
         self.webView?.configuration.userContentController.addUserScript(userScript)
     }
     
