@@ -84,6 +84,10 @@ it, simply add the following line to your Podfile:
 pod 'HoloWebViewBridge'
 ```
 
+## Thanks
+
+[OCTWebViewBridge](https://github.com/octree/OCTWebViewBridge)
+
 ## Author
 
 gonghonglou, gonghonglou@icloud.com
