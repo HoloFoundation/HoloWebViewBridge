@@ -48,11 +48,11 @@ class WebViewLogPlugin: WebViewPluginProtocol {
     }
     
     var javascript: String {
-        if let path = Bundle(for: WebViewLogPlugin.self).path(forResource: "log", ofType: "js"),
-           let js = try? String(contentsOfFile: path, encoding: .utf8) {
-            return js
+        return """
+        window.bridge.log = function(msg) {
+            window.bridge.js_msgSend("holo.webView.bridge.log", "log()", msg)
         }
-        return ""
+        """
     }
     
     func didReceiveMessage(_ fun: String, args: Any?) {
@@ -63,17 +63,13 @@ class WebViewLogPlugin: WebViewPluginProtocol {
 }
 ```
 
-3, Define log function in `log.js`
-```javascript
-window.bridge.log = function(msg) {
-    window.bridge.js_msgSend("holo.webView.bridge.log", "log()", msg)
-}
-```
-
-4, Call function in JS
+3, Call function in JS
 ```javascript
 window.bridge.log("hello world")
 ```
+
+**Note that if your JS methods are complex, you can also define the JS method in a .js file and return the contents of the file in the `var javascript: String { get }` protocol method, like [WebViewAlertPlugin.swift](https://github.com/HoloFoundation/HoloWebViewBridge/blob/master/Example/HoloWebViewBridge/WebViewAlertPlugin.swift#L43-L49) & [alert.js](https://github.com/HoloFoundation/HoloWebViewBridge/blob/master/Example/HoloWebViewBridge/alert.js).**
+
 
 ## Installation
 
