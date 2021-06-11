@@ -11,13 +11,28 @@
 @implementation WKWebView (HoloBridge)
 
 + (void)load {
-    method_exchangeImplementations(class_getInstanceMethod(self.class, NSSelectorFromString(@"dealloc")),
-                                   class_getInstanceMethod(self.class, @selector(holoBridge_dealloc)));
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        Class class = [self class];
+        
+        SEL originalSelector = NSSelectorFromString(@"dealloc");
+        SEL swizzledSelector = @selector(_holoBridge_dealloc);
+        
+        Method originalMethod = class_getInstanceMethod(class, originalSelector);
+        Method swizzledMethod = class_getInstanceMethod(class, swizzledSelector);
+        
+        BOOL success = class_addMethod(class, originalSelector, method_getImplementation(swizzledMethod), method_getTypeEncoding(swizzledMethod));
+        if (success) {
+            class_replaceMethod(class, swizzledSelector, method_getImplementation(originalMethod), method_getTypeEncoding(originalMethod));
+        } else {
+            method_exchangeImplementations(originalMethod, swizzledMethod);
+        }
+    });
 }
 
-- (void)holoBridge_dealloc {
+- (void)_holoBridge_dealloc {
     [self.configuration.userContentController removeScriptMessageHandlerForName:@"bridge"];
-    [self holoBridge_dealloc];
+    [self _holoBridge_dealloc];
 }
 
 @end
